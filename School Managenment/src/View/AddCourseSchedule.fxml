@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.labs.scene.control.BigDecimalField?>
+
+<AnchorPane id="AnchorPane" prefHeight="348.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddCourseScheduleController">
+   <children>
+      <JFXDatePicker fx:id="datefield" layoutX="146.0" layoutY="74.0" onAction="#getDay" prefHeight="30.0" prefWidth="200.0" />
+      <Label layoutX="73.0" layoutY="172.0" text="Start Time:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="211.0" text="End Time:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="93.0" text="Date:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="daybox" layoutX="146.0" layoutY="113.0" prefHeight="31.0" prefWidth="200.0" promptText="Day of the week" />
+      <Label layoutX="108.0" layoutY="134.0" text="Day:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="searchScheduleButton" layoutX="191.0" layoutY="295.0" onAction="#okButtonAction" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="OK" textFill="#d0dae1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="searchScheduleButton1" layoutX="277.0" layoutY="295.0" onAction="#cancel" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Cancel" textFill="#d0dae1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="121.0" layoutY="14.0" prefHeight="38.0" prefWidth="266.0" text="Setup a new Schedule" textFill="#2b5775">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="254.0" text="Place:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <BigDecimalField fx:id="endMinutes" layoutX="238.0" layoutY="200.0" prefHeight="31.0" prefWidth="100.0" promptText="Minutes" />
+      <BigDecimalField fx:id="startMinutes" layoutX="237.0" layoutY="158.0" prefHeight="31.0" prefWidth="100.0" promptText="Minutes" />
+      <JFXComboBox fx:id="startHour" layoutX="146.0" layoutY="158.0" promptText="Hour" />
+      <JFXComboBox fx:id="endHour" layoutX="147.0" layoutY="200.0" promptText="Hour" />
+      <JFXComboBox fx:id="ampm1" layoutX="346.0" layoutY="156.0" />
+      <JFXComboBox fx:id="ampm2" layoutX="347.0" layoutY="200.0" />
+      <JFXComboBox fx:id="placefield" layoutX="141.0" layoutY="237.0" prefHeight="31.0" prefWidth="100.0" promptText="Place" />
+   </children>
+</AnchorPane>

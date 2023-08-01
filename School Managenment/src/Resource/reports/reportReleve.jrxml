@@ -1,0 +1,1969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportReleve" language="groovy" pageWidth="1000" pageHeight="595" orientation="Landscape" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="5" uuid="14e3d17f-c664-4fbf-8383-7e24d1cc6ab7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="56"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ReleveDataSet" uuid="e1130a89-a8ae-4314-ad41-274fbfb3c901">
+		<parameter name="Numero" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["N°"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="NameNickname" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["Name(s) and First Name (s)"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="prmRegNum" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["Reg N°"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="prmGradeText" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["Grade"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="prmScoreText" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["Score"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="prmCreditsText" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["Score"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="prmReqGradeText" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["Req. Grade"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="prmCourse1Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse1ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse1Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse2Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse2ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse2Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse3Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse3ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse3Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse4Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse4ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse4Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse5Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse5ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse5Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse6Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse6ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse6Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse7Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse7ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse7Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse8Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse8ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse8Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse9Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse9ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse9Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse10Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse10ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse10Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse11Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse11Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse11ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse12Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse12Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse12ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse13Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse13Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse13ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse14Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse14Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse14ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse15Credits" class="java.lang.Number" isForPrompting="false"/>
+		<parameter name="prmCourse15Name" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="prmCourse15ReqGrade" class="java.lang.String" isForPrompting="false"/>
+		<field name="nameNick" class="java.lang.String"/>
+		<field name="regNum" class="java.lang.String"/>
+		<field name="numOrdre" class="java.lang.String"/>
+		<field name="score1" class="java.lang.String"/>
+		<field name="score2" class="java.lang.String"/>
+		<field name="score3" class="java.lang.String"/>
+		<field name="score4" class="java.lang.String"/>
+		<field name="score5" class="java.lang.String"/>
+		<field name="score6" class="java.lang.String"/>
+		<field name="score7" class="java.lang.String"/>
+		<field name="score8" class="java.lang.String"/>
+		<field name="score9" class="java.lang.String"/>
+		<field name="score10" class="java.lang.String"/>
+		<field name="grade1" class="java.lang.String"/>
+		<field name="grade2" class="java.lang.String"/>
+		<field name="grade3" class="java.lang.String"/>
+		<field name="grade4" class="java.lang.String"/>
+		<field name="grade5" class="java.lang.String"/>
+		<field name="grade6" class="java.lang.String"/>
+		<field name="grade7" class="java.lang.String"/>
+		<field name="grade8" class="java.lang.String"/>
+		<field name="grade9" class="java.lang.String"/>
+		<field name="grade10" class="java.lang.String"/>
+		<field name="score11" class="java.lang.String"/>
+		<field name="score12" class="java.lang.String"/>
+		<field name="score13" class="java.lang.String"/>
+		<field name="score14" class="java.lang.String"/>
+		<field name="score15" class="java.lang.String"/>
+		<field name="grade11" class="java.lang.String"/>
+		<field name="grade12" class="java.lang.String"/>
+		<field name="grade13" class="java.lang.String"/>
+		<field name="grade14" class="java.lang.String"/>
+		<field name="grade15" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="ItemDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="prmCourse1Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse1ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse1Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse2Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse2ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse2Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse3Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse3ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse3Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse4Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse4ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse4Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse5Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse5ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse5Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse6Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse6ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse6Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse7Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse7ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse7Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse8Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse8ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse8Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse9Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse9ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse9Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse10Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse10ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse10Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="imagesDir" class="java.lang.Object" isForPrompting="false"/>
+	<parameter name="semesterName" class="java.lang.String"/>
+	<parameter name="accademicY" class="java.lang.String"/>
+	<parameter name="semester" class="java.lang.String"/>
+	<parameter name="reportTitle" class="java.lang.String"/>
+	<parameter name="faculty" class="java.lang.String"/>
+	<parameter name="department" class="java.lang.String"/>
+	<parameter name="level" class="java.lang.String"/>
+	<parameter name="sep" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="prmCourse11Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse12Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse13Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse14Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse15Credits" class="java.lang.Number" isForPrompting="false"/>
+	<parameter name="prmCourse11Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse12Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse13Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse14Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse15Name" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse11ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse12ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse13ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse14ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prmCourse15ReqGrade" class="java.lang.String" isForPrompting="false"/>
+	<variable name="CURRENT_PAGE_NUMBER" class="java.lang.String">
+		<variableExpression><![CDATA["pageNumber"]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<variable name="TOTAL_PAGE_NUMBER" class="java.lang.String">
+		<variableExpression><![CDATA["pageTotal"]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="127" splitType="Stretch">
+			<line>
+				<reportElement positionType="Float" x="-20" y="66" width="1241" height="1" isPrintWhenDetailOverflows="true" uuid="3508d157-afd6-49df-a652-740b60de82cd"/>
+			</line>
+			<staticText>
+				<reportElement x="110" y="26" width="178" height="13" uuid="8ad02ba0-ede8-494f-9e48-d5452b391ad6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true" isItalic="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Dignity - Faith - Responsibility]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="687" y="1" width="214" height="20" uuid="63ff2b55-0e6b-4511-b1f6-5cdf3dcb7102"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true" pdfFontName="Times-BoldItalic" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{semesterName}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="1" y="1" width="49" height="70" uuid="6adf5c78-3e24-47f4-a12d-5ec783102b17"/>
+				<imageExpression><![CDATA[$P{imagesDir}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="55" y="1" width="277" height="25" uuid="39a2a4fd-5e13-4eaf-93be-62b98f688266"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18" isBold="true" isItalic="false" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PKFokam Institute of Excellence]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="441" y="46" width="64" height="20" uuid="255407a7-bc38-4a2d-ab78-3495d0583e4c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{accademicY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="153" y="24" width="748" height="24" uuid="f80deba3-e1c1-45f1-aef0-0af7ad1ba6a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reportTitle}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="504" y="46" width="100" height="20" uuid="1b320963-652b-4196-b9b4-4f32b5c6fc76"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{semester}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="124" y="67" width="798" height="22" isPrintWhenDetailOverflows="true" uuid="15b2d37f-9bea-49a2-a173-f807a349cedc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{faculty}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="123" y="88" width="799" height="20" isPrintWhenDetailOverflows="true" uuid="7a1834b8-508c-4459-b80a-097b33fc8f03"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{department}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="124" y="107" width="798" height="20" uuid="5e94ae5b-d64a-489b-bdfe-c043a2ef10e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{level}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="770" y="46" width="52" height="20" uuid="af63d062-b2bb-45db-b397-145bab3feb9c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Yaounde,]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement positionType="Float" x="822" y="46" width="100" height="20" uuid="9678fcb7-84b0-472f-a550-15df48c11f6a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="137" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 11" x="1" y="2" width="802" height="125" uuid="6eb844be-1425-4348-9be1-5cf73372a558"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ReleveDataSet" uuid="ed9a0c50-8475-4c95-bf87-5649f13f908b">
+						<datasetParameter name="prmCourse1Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse1Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse1ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse1ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse1Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse1Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse2Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse2Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse2ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse2ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse2Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse2Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse3Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse3Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse3ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse3ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse3Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse3Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse4Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse4Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse4ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse4ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse4Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse4Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse5Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse5Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse5ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse5ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse5Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse5Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse6Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse6Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse6ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse6ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse6Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse6Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse7Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse7Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse7ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse7ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse7Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse7Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse8Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse8Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse8ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse8ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse8Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse8Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse9Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse9Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse9ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse9ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse9Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse9Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse10Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse10Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse10ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse10ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse10Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse10Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse12Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse12Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse12Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse12Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse12ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse12ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse11Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse11Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse11Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse11Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse11ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse11ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse13Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse13Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse13Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse13Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse13ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse13ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse14Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse14Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse14Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse14Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse14ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse14ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse15Name">
+							<datasetParameterExpression><![CDATA[$P{prmCourse15Name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse15Credits">
+							<datasetParameterExpression><![CDATA[$P{prmCourse15Credits}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="prmCourse15ReqGrade">
+							<datasetParameterExpression><![CDATA[$P{prmCourse15ReqGrade}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$P{ItemDataSource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="168" uuid="c1f6fa7f-edb8-479e-a4dc-c043116e968a">
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="168" height="114" uuid="1d640396-8906-444b-82b8-9fcf74da6ac3"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="115" width="30" height="28" uuid="0b43e3a6-9142-4aa0-a11d-88a8c2ebf6a7"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{Numero}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="30" y="115" width="138" height="28" uuid="b426fe91-a12c-4578-8a51-09b9d129609e"/>
+								<box leftPadding="3" rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{NameNickname}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="31" uuid="189581d8-4e2b-4ef7-8449-d8fcd6d3eca6"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{numOrdre}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement mode="Transparent" x="30" y="0" width="138" height="31" uuid="da86a56a-0a2c-4ad3-93aa-d38a20a10c60"/>
+								<box leftPadding="3" rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nameNick}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="66" uuid="dca3ab4b-92e2-42df-b3ce-36baa5dd1813">
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="66" height="75" uuid="d40f1cef-59fa-4d59-b712-4ac68b01857d"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="94" width="66" height="20" uuid="128fc4c4-afc7-4b52-a927-0ed2835d2b09"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmReqGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="66" height="20" uuid="1abe36de-9e3c-4cd7-878e-f463274f5366"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCreditsText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="115" width="66" height="28" uuid="900ff2da-6ca1-4e84-8a62-a4b70b11054c"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmRegNum}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="66" height="31" uuid="e6e0667b-71cf-4b74-a497-5a22b14656c9"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{regNum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="bb7e83a6-ee34-4072-a033-0a095b985ca4">
+						<printWhenExpression><![CDATA[$P{prmCourse1Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="94" width="90" height="20" uuid="4bfbf5ed-595e-4ffa-92fa-0db504fe25aa"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse1ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="19" uuid="855a1ac8-54b7-48f1-bc97-023e3a3d2ded"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse1Credits}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="193fe8ce-5ba7-428e-8b9c-7ea0f5f0e883"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse1Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="115" width="44" height="28" uuid="8e18c3c3-2273-4f40-b59a-89073dd5e7ab"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="44" y="115" width="46" height="28" uuid="bd96171f-7f0a-4efe-8a02-8b3bf8e3e03b"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="44" height="31" uuid="f060fabb-9197-45d2-8d09-2dd4a7d68f02"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="44" y="0" width="46" height="31" uuid="84cc2ee9-8a06-4b16-995f-87a36de73315"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade1}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="fb2165f9-310b-4023-a0df-87c35a77e793">
+						<printWhenExpression><![CDATA[$P{prmCourse2Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField>
+								<reportElement x="44" y="115" width="46" height="29" uuid="6327c44f-0c8e-418c-a5eb-467cfb8bcc82"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="115" width="44" height="28" uuid="20222bf4-05d3-43d8-93b3-550a71e1a12b"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="ce195e1f-ecb3-439a-829d-029ae2a5e250"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse2Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="19" uuid="5188c98c-cb36-44fd-9fac-2ecb943232de"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse2Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="19" uuid="50490e08-4f67-4d29-a2b7-4933633e76fd"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse2ReqGrade}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="44" height="31" uuid="9d492c7d-0bf3-40c0-8251-24e4953b94e5"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="44" y="0" width="46" height="31" uuid="169db02f-85a9-4e62-913d-52fef86f8e23"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="43eba891-88fa-4e7c-a9fc-b277a12c03aa">
+						<printWhenExpression><![CDATA[$P{prmCourse3Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="02ddf92b-ab31-42e8-a735-224838e59d63"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse3Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="19" uuid="c70d2ed6-283f-4378-9c0d-dbe7f6ce32bd"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse3Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="20" uuid="9d1e3988-c5de-4de6-847f-18afbd4183e7"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse3ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="1" y="115" width="45" height="28" uuid="bd6f69c0-be09-4bd9-bc9b-7c50629e22e4"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="46" y="115" width="44" height="28" uuid="558e7356-5885-40db-9e31-de342b23e039"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="46" height="31" uuid="b668a6c8-a94f-484a-b8c9-637e9aadc6e8"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="46" y="0" width="44" height="31" uuid="6cc3843b-f2c3-4d72-8c49-fca911c48ada"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="53c8d537-ba02-418f-9d9d-aebfb4f01d20">
+						<printWhenExpression><![CDATA[$P{prmCourse4Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="d31ce5b3-a204-4b67-ab33-f0d771b0b4df"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse4Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="0fe8d883-1581-476d-a779-1e278104b199"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse4Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="20" uuid="717d4f8a-109c-4eaf-9a43-b483842b2954"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse4ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="28" uuid="822124e6-f82d-4e11-837d-c95bfa405699"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="43" height="28" uuid="a5d5ecab-a29e-4f6d-8e48-8d1eeac4b687"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="1b877f56-820a-4e46-ad26-1fb3cdc93817"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="0" width="47" height="31" uuid="153c5ff1-f7f8-45fa-ad54-ee3927d8b972"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="91" uuid="9a6b99b8-a2e5-4c40-836b-07dddd3ff0c4">
+						<printWhenExpression><![CDATA[$P{prmCourse5Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="91" height="75" uuid="02642c4b-cb00-47dc-b1b3-2fb32c51651a"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse5Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="91" height="20" uuid="111437e7-aaf1-4b7f-908e-1e5799b932e3"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse5Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="91" height="21" uuid="1ba4358a-692a-4ba2-ba51-5bee936af492"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse5ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="47" y="116" width="44" height="28" uuid="5c762046-c6f3-448d-a340-ce9f44b2ae5b"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="47" height="28" uuid="2774ad39-a8f1-4406-9bea-8bf3300c11be"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="31" uuid="02a0d269-1ecc-48ef-bc46-f34518ebbe07"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="47" y="0" width="44" height="31" uuid="5693226b-013e-4692-a471-efb2d904cf84"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="336fa581-f89e-4d05-a6cc-d13374893e3e">
+						<printWhenExpression><![CDATA[$P{prmCourse6Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="8ed7f524-d092-4ca7-a43e-891b3dda6185"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse6Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="837df16d-42b6-4b7e-b220-1f083a67a5b5"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse6Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="20" uuid="d3e8a1e5-a561-40bf-9976-9454c8d07e44"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse6ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="28" uuid="d4a5dcab-76dd-4095-b59f-d0c5066ac433"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="43" height="28" uuid="cf261835-63ad-44b1-9337-e3a44c881265"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="94428cf1-3742-4973-ad1e-fdf7c8f23c07"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score6}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="0" width="47" height="31" uuid="0f598515-ff06-4d05-9183-f312b97941a0"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade6}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a4d9cd44-ce2c-4e78-9db2-64a8c89ad030">
+						<printWhenExpression><![CDATA[$P{prmCourse7Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="3e9864a7-7b4b-46f5-87c6-ef8e7341db89"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse7Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="e0660945-e250-48b8-9c79-01b8cfff522f"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse7Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="c5ef4d8c-c05c-49c6-891a-687175f716ef"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse7ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="47" y="116" width="43" height="28" uuid="4b5a9639-6923-4216-a98a-c8b32c99b98f"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="47" height="28" uuid="d333e542-c8c6-4f54-b612-32083b4ea668"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="31" uuid="acd225a0-2af2-46e9-8ddd-6b02eaccdfe2"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score7}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="47" y="0" width="43" height="31" uuid="ac8d2f82-ea76-4a0f-837b-27bfe897b75c"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade7}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="20653120-b029-4519-b808-d8f8bfd72023">
+						<printWhenExpression><![CDATA[$P{prmCourse8Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="cf875a99-6ac0-4165-8c63-37961dd2d914"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse8Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="6b79e7d8-9ee5-457e-a751-1c4d21851d2f"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse8Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="baa96945-96a3-437b-8932-f5c2e0c40751"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse8ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="47" y="116" width="43" height="28" uuid="157b4d0f-dccf-42c4-aeee-5a1edcffef44"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="47" height="28" uuid="e7ebf56b-ef73-444a-80ab-a1db6c227089"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="31" uuid="562fdb1e-f9e9-497a-b4d4-a6d7a8ac892a"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score8}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="47" y="0" width="43" height="31" uuid="58072e14-870b-4ac2-90f7-d22db8e1e783"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade8}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="293979fc-6ab1-4097-9588-252fba1baeac">
+						<printWhenExpression><![CDATA[$P{prmCourse9Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="75" uuid="8fb9c0e6-60db-4838-8ad4-6df6b34131eb"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse9Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="30d76b88-4902-455a-a74c-7f9737e95e99"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse9Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="cacabb79-5df1-46a3-afb6-b0d1efde15b5"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse9ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="28" uuid="d943649c-2364-4c73-af0e-17e233d07afa"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="43" height="28" uuid="f54dd8e5-0854-4eb5-b3cc-0bff1bd5e54b"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="48e3c178-0175-40b4-9b1e-7756fb174e9e"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score9}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="0" width="47" height="31" uuid="e40392dd-a48f-4518-9869-a7bfd38253d8"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade9}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="7fe2de53-f29c-44ac-906d-f24284ccfdf8">
+						<printWhenExpression><![CDATA[$P{prmCourse10Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="90" height="75" uuid="fa1bfccc-c0b6-4c4a-82b8-22e1ce9a7704"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse10Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="17f437e2-f651-427d-938f-7553ed6deea7"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse10Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="36bbc622-b95f-4343-931e-539befee8e34"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse10ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="28" uuid="154aa872-872d-4e0c-ae77-38bda1617461"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="43" height="28" uuid="5cdb4d9b-ab03-44b0-8f4b-21b0e3de06b1"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="5564aef2-c2e3-4c53-9d89-70bd8fe31904"/>
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score10}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="0" width="47" height="31" uuid="477cb78d-f8ee-4f14-a6b9-e53db9f4d5ab"/>
+								<box rightPadding="0">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="1.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade10}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f65bf658-067b-45cf-9fe1-87c067b09625">
+						<printWhenExpression><![CDATA[$P{prmCourse11Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="75" uuid="e24c2e37-5fb1-4f05-9330-29af7a3e721b"/>
+								<box>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse11Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="9f383c55-1d1b-40ca-aff6-d5f56d1840d0"/>
+								<box>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse11Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="ab947b11-3840-4df4-9efa-a27ab220cb9c"/>
+								<box>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse11ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="42" height="28" uuid="a4e7eed4-56d6-4741-b1f4-72d53e964bda"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="46" height="28" uuid="b6f957d2-e630-4471-b930-97e8ca2da251"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="42" y="0" width="47" height="31" uuid="94750e00-e8da-414e-b5b5-6a1290b80825"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade11}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="01daf16e-d955-4f7e-bb80-462bfc84591d"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score11}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a835c5d5-0211-4b3f-a2f0-b249956a832a">
+						<printWhenExpression><![CDATA[$P{prmCourse12Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="75" uuid="c604e132-2469-4ebf-bf0f-b2eadd872d0d"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse12Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="aefb38ef-476c-47b8-b87c-45e27f3c7070"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse12Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="6c029fc6-6e2a-4883-9e75-a3576ad91e55"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse12ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="27" uuid="d70725f5-abc2-4182-bb6b-5dfc9bd64e23"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="43" height="28" uuid="e7576e3d-6a1d-464b-a0f7-9fcf3d3caf63"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="42" y="0" width="48" height="31" uuid="79105b95-9421-4a95-8761-10e7a5e93da3"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade12}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="21906531-6427-4e42-97aa-97a5349b68f6"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score12}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="5573d0de-4647-4b05-a892-b310f7029837">
+						<printWhenExpression><![CDATA[$P{prmCourse13Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="75" uuid="eb7d6578-05d7-48cd-acf6-b4265d4082b6"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse13Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="3f62a5e9-246c-442c-a8a0-c4cf57193b1d"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse13Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="26a35865-522c-4588-8c55-6a2ef79bff64"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse13ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="43" height="28" uuid="d61553d7-7ee2-437b-a43f-9eb2eeea7a40"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="28" uuid="bdaa6e38-3fc0-44ff-82ef-fe191baeb3b8"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="0734ebda-5426-4f8d-ba2d-329b77bec850"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score13}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="44" y="0" width="46" height="31" uuid="5795c2a8-8684-48d0-b969-016bf9d054d1"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade13}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a8b026f1-8276-4d11-9e26-1ce2313430dd">
+						<printWhenExpression><![CDATA[$P{prmCourse14Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="75" uuid="0e8fd0ca-29f3-469f-990d-676e5d704308"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse14Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="2a0b323f-0d0d-4ebd-b198-5f4e2299c4ff"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse14Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="4ae339a1-3982-47f4-a71e-7fdc4fc73ec3"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse14ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="44" height="28" uuid="204354f1-d982-4669-b5cb-812594f0a8b4"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="28" uuid="bd6e2656-6aca-494f-9594-8e9b520c94be"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="0bfee8fe-ecf1-4890-ba44-1278e681badf"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score14}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="0" width="47" height="31" uuid="7a61c391-94f9-4454-a370-52096c86eebb"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade15}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="9c2813d4-9cd6-4680-8eec-32e84e83c570">
+						<printWhenExpression><![CDATA[$P{prmCourse15Name}.equals(null)?false:true]]></printWhenExpression>
+						<jr:columnHeader height="144" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="75" uuid="555b9792-d54c-4e48-aa48-adea7407b885"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse15Name}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="75" width="90" height="20" uuid="2b0c3ad1-3e9e-44ff-91fa-ea7c097f35b8"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse15Credits}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="95" width="90" height="21" uuid="835be486-59e8-4353-84af-2af52de29578"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmCourse15ReqGrade}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="116" width="43" height="28" uuid="1ce6f154-10f1-40b2-8efb-4d3cdb1bed5f"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmScoreText}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="116" width="47" height="28" uuid="3494cee7-9426-4da9-b3bb-05325a5a70a8"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$P{prmGradeText}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell height="31" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="31" uuid="03f84e3b-55fc-42ba-8dce-d26d313efdb5"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{score15}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="43" y="0" width="47" height="31" uuid="778b29c9-be17-47ea-b8ae-d9f5fbe5e5cb"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{grade15}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="83" splitType="Stretch">
+			<textField>
+				<reportElement x="740" y="68" width="78" height="15" uuid="bd62a541-de54-45ff-a32b-790dd1b7fa0c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{CURRENT_PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="822" y="68" width="176" height="15" uuid="20451960-23d8-429c-a4cd-a4be04d7e351"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{TOTAL_PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="-20" y="1" width="1241" height="1" isPrintWhenDetailOverflows="true" uuid="7ad2122a-4758-485c-a419-f89e91f4bfff"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="57" width="100" height="20" uuid="677da351-ad48-42ff-a164-e380092b312c"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[The Rector]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="56" width="100" height="20" uuid="d34d6062-99af-47b2-8c7c-9101146b4b84"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Members of the jury]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

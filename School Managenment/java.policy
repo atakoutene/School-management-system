@@ -1,0 +1,4 @@
+grant CodeBase "School Managenment.jar"
+{
+    permission java.security.AllPermission;
+};

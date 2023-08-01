@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="693.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainPageForAllController">
+   <children>
+      <TabPane layoutY="24.0" prefWidth="892.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+        <tabs>
+            <Tab text="Configs and Recap">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" prefHeight="53.0" prefWidth="970.0" text="Configurations and Statistics" textFill="#2b5775" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TabPane layoutX="14.0" layoutY="61.0" prefHeight="562.0" prefWidth="870.0" style="-fx-border-color: gray;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="61.0">
+                          <tabs>
+                            <Tab text="Departments">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="750.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <TableView fx:id="departmentTable" layoutX="6.0" layoutY="49.0" onMouseClicked="#showStudentsDept" prefHeight="471.0" prefWidth="375.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="49.0">
+                                            <columns>
+                                              <TableColumn fx:id="deptTableColName" prefWidth="182.0" text="Name" />
+                                              <TableColumn fx:id="deptTableColHead" prefWidth="190.0" text="Head of Department" />
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="addDepartement" layoutX="8.0" layoutY="4.0" mnemonicParsing="false" onAction="#addDepartmentAction" opacity="1.0" prefHeight="20.0" prefWidth="23.0" style="-fx-background-color: white;">
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Resource/images/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editDepartment" layoutX="58.0" layoutY="5.0" mnemonicParsing="false" onAction="#editDepartmentAction" opacity="1.0" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                                             <graphic>
+                                                <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Resource/images/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteDepartment" layoutX="115.0" layoutY="3.0" mnemonicParsing="false" onAction="#deleteDepartmentAction" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="520.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Resource/images/minus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <TabPane layoutX="389.0" layoutY="5.0" prefHeight="516.0" prefWidth="471.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="389.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0">
+                                            <tabs>
+                                              <Tab text="Students">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                                         <children>
+                                                            <TableView fx:id="departmentStudTable" layoutY="15.0" prefHeight="472.0" prefWidth="574.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="departmentStudTableName" prefWidth="145.0" text="Name" />
+                                                                <TableColumn fx:id="departmentStudTableRef" prefWidth="72.0" text="Reference" />
+                                                                  <TableColumn fx:id="departmentStudTableLev" text="Level" />
+                                                                  <TableColumn fx:id="departmentStudTableProg" prefWidth="86.0" text="Program" />
+                                                                  <TableColumn fx:id="departmentStudTableEnt" prefWidth="87.0" text="Entrance Y." />
+                                                              </columns>
+                                                            </TableView>
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab text="Faculties">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <TableView fx:id="departmentFaculties" layoutX="2.0" layoutY="14.0" prefHeight="472.0" prefWidth="572.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="departmentFacultiesTitle" prefWidth="33.0" text="Title" />
+                                                                <TableColumn fx:id="departmentFacultiesName" prefWidth="238.0" text="Name" />
+                                                                  <TableColumn fx:id="departmentFacultiesSpecialty" prefWidth="169.0" text="Specialty" />
+                                                                  <TableColumn fx:id="departmentFacultiesPhone" prefWidth="106.0" text="Telephone" />
+                                                              </columns>
+                                                            </TableView>
+                                                         </children></AnchorPane>
+                                                </content>
+                                              </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Semesters">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <TableView fx:id="tableSemester" layoutX="8.0" layoutY="46.0" onMouseClicked="#showSemDetails" prefHeight="481.0" prefWidth="235.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="46.0">
+                                            <columns>
+                                              <TableColumn fx:id="tableSemesterColName" prefWidth="135.0" text="Semester Name" />
+                                              <TableColumn fx:id="tableSemesterColYear" prefWidth="97.0" text="Year" />
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="addSemester" layoutX="10.0" layoutY="4.0" mnemonicParsing="false" onAction="#addSemesterAction" opacity="1.0" prefHeight="20.0" prefWidth="23.0" style="-fx-background-color: white;">
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Resource/images/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editSemester" layoutX="64.0" layoutY="6.0" mnemonicParsing="false" onAction="#editSemesterAction" opacity="1.0" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                                             <graphic>
+                                                <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Resource/images/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteSemester" layoutX="120.0" layoutY="4.0" mnemonicParsing="false" onAction="#deleteSemesterAction" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="520.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Resource/images/minus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <TabPane layoutX="246.0" layoutY="48.0" prefHeight="480.0" prefWidth="721.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="48.0">
+                                            <tabs>
+                                              <Tab text="Students">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label layoutX="8.0" layoutY="37.0" style="-fx-font-weight: bold;" text="Program: " textFill="#3a3ab8" />
+                                                            <JFXComboBox fx:id="semProgramBox" layoutX="64.0" layoutY="21.0" onAction="#changeSemesterProgramlist" prefHeight="31.0" prefWidth="319.0" promptText="Program" />
+                                                            <Label layoutX="389.0" layoutY="37.0" style="-fx-font-weight: bold;" text="Level: " textFill="#3a3ab8" />
+                                                            <JFXComboBox fx:id="semProgLevel" layoutX="426.0" layoutY="28.0" prefHeight="25.0" prefWidth="136.0" promptText="Level" />
+                                                            <JFXButton fx:id="goSemesterStudent" layoutX="569.0" layoutY="33.0" onAction="#goButtonActionStudent" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #2b5775;" text="Search" textFill="#d0dae1" />
+                                                            <TableView fx:id="semStudTable" layoutX="8.0" layoutY="70.0" prefHeight="376.0" prefWidth="711.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="70.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="sRefNumCol" prefWidth="75.0" text="R. Number" />
+                                                                <TableColumn fx:id="sNameCol" prefWidth="374.0" text="Name" />
+                                                                  <TableColumn fx:id="levelCol" prefWidth="133.0" text="Level" />
+                                                                  <TableColumn fx:id="entYearCol" prefWidth="120.0" text="Ent. Year" />
+                                                              </columns>
+                                                            </TableView>
+                                                            <JFXButton fx:id="printSemStudent" ellipsisString="" layoutX="645.0" layoutY="8.0" onAction="#printStudentSemester" prefHeight="50.0" prefWidth="50.0">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../Resource/images/pdf.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab text="Course Offered">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label layoutX="7.0" layoutY="37.0" style="-fx-font-weight: bold;" text="Program: " textFill="#3a3ab8" />
+                                                            <JFXComboBox fx:id="semProgramBox1" layoutX="66.0" layoutY="22.0" onAction="#chargeCoursesProgramlist" prefHeight="31.0" prefWidth="319.0" promptText="Program" />
+                                                            <TableView fx:id="tableProgramCourse1" layoutX="7.0" layoutY="68.0" prefHeight="380.0" prefWidth="711.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="68.0">
+                                                               <columns>
+                                                                  <TableColumn fx:id="codeProgramCourse1" prefWidth="106.0" text="Code" />
+                                                                  <TableColumn fx:id="titleProgramCourse1" prefWidth="207.0" text="Title" />
+                                                                  <TableColumn fx:id="levelProgramCourse1" prefWidth="147.0" text="Level" />
+                                                                  <TableColumn fx:id="gradeProgramCourse1" prefWidth="101.0" text="P. Grade" />
+                                                                  <TableColumn fx:id="creditsProgramCourse1" prefWidth="59.0" text="Credits" />
+                                                                  <TableColumn fx:id="coreProgramCourse1" prefWidth="87.0" text="Core?" />
+                                                               </columns>
+                                                            </TableView>
+                                                            <JFXButton fx:id="printProgramCourseOff" ellipsisString="" layoutX="651.0" layoutY="8.0" onAction="#printProgramCourseOffGo" prefHeight="58.0" prefWidth="57.0">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../Resource/images/pdf.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </JFXButton>
+                                                         </children></AnchorPane>
+                                                </content>
+                                              </Tab>
+                                                <Tab text="Semester Operations">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <TitledPane animated="false" layoutX="14.0" layoutY="14.0" prefHeight="131.0" prefWidth="295.0" text="Maximum number of credits">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="111.0" prefWidth="293.0">
+                                                                     <children>
+                                                                        <Label layoutX="1.0" layoutY="13.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Current value : " />
+                                                                        <JFXTextField fx:id="maxNumCredit" editable="false" layoutX="97.0" layoutY="5.0" prefHeight="25.0" prefWidth="115.0" />
+                                                                        <Label layoutX="19.0" layoutY="45.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="New value : " />
+                                                                        <JFXTextField fx:id="newMaxCredits" layoutX="97.0" layoutY="36.0" onAction="#updateNumberOfCredits" prefHeight="25.0" prefWidth="116.0" />
+                                                                        <JFXButton fx:id="updateCredits" layoutX="158.0" layoutY="76.0" onAction="#updateNumberOfCredits" style="-fx-background-color: #2b5775;" text="Update" textFill="#f8f4f4" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                              </content>
+                                                            </TitledPane>
+                                                            <TitledPane animated="false" layoutX="321.0" layoutY="14.0" prefHeight="224.0" prefWidth="394.0" text="Consolidated Results for the Jury">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="14.0" layoutY="27.0" prefHeight="20.0" prefWidth="122.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Select a Semester: " />
+                                                                        <JFXComboBox fx:id="idSemesterForJury" layoutX="136.0" layoutY="16.0" prefHeight="25.0" prefWidth="203.0" />
+                                                                        <JFXButton fx:id="idGenJury" layoutX="225.0" layoutY="158.0" onAction="#generateJuryReport" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: #2b5775;" text="Generate" textFill="#f5f4f4" />
+                                                                        <Label layoutX="14.0" layoutY="94.0" prefHeight="20.0" prefWidth="122.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Select a Program: " />
+                                                                        <Label layoutX="14.0" layoutY="65.0" prefHeight="20.0" prefWidth="122.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Select a Faculty: " />
+                                                                        <JFXComboBox fx:id="idFacultyForJury" layoutX="137.0" layoutY="51.0" onAction="#onFacultySelectedForJuryAction" prefHeight="25.0" prefWidth="203.0" />
+                                                                        <JFXComboBox fx:id="idProgramForJury" layoutX="136.0" layoutY="85.0" onAction="#onProgramSelectedForJuryAction" prefHeight="25.0" prefWidth="203.0" />
+                                                                        <Label layoutX="14.0" layoutY="125.0" prefHeight="20.0" prefWidth="122.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Select a Level: " />
+                                                                        <JFXComboBox fx:id="idLevelForJury" layoutX="136.0" layoutY="116.0" prefHeight="25.0" prefWidth="203.0" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                              </content>
+                                                            </TitledPane>
+                                                            <TitledPane animated="false" layoutX="14.0" layoutY="160.0" prefHeight="79.0" prefWidth="296.0" text="Close a semester">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <JFXButton fx:id="closeSemester" layoutX="20.0" layoutY="14.0" onAction="#closeSemesterAction" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: #2b5775;" text="Click here to close the current semester." textFill="#f2eeee" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                              </content>
+                                                            </TitledPane>
+                                                         </children></AnchorPane>
+                                                  </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="General Configurations">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Accordion layoutX="14.0" layoutY="14.0" prefHeight="101.0" prefWidth="430.0">
+                                            <panes>
+                                              <TitledPane animated="false" text="Name of the person signing the transcripts">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <JFXTextField fx:id="signingAuthorities" layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="406.0" text="The Academic Affairs Officer">
+                                                               <font>
+                                                                  <Font name="Times New Roman" size="18.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </TitledPane>
+                                            </panes>
+                                          </Accordion>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Programs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="316.0" layoutY="4.0" text="Programs Management" textFill="#2b5775">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="searchProgram" alignment="CENTER" labelFloat="true" layoutX="25.0" layoutY="63.0" onKeyReleased="#researchPrograme" prefHeight="35.0" prefWidth="297.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="addProgram" layoutX="24.0" layoutY="116.0" onAction="#toAddProgram" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: #2b5775;" text="New Program" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="modifyProgram" layoutX="142.0" layoutY="116.0" onAction="#toModifyProgram" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Edit" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteProgram" layoutX="229.0" layoutY="116.0" onAction="#deleteProgram" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Delete" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="tableProgram" layoutX="23.0" layoutY="153.0" onMouseClicked="#displayProgramDetails" prefHeight="479.0" prefWidth="303.0">
+                           <columns>
+                              <TableColumn fx:id="programTitle" prefWidth="302.0" text="Program Title" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="529.0" layoutY="81.0" text="Program Details" textFill="#e8dddd">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TabPane layoutX="331.0" layoutY="154.0" prefHeight="478.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Program courses">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableProgramCourse" layoutX="3.0" layoutY="52.0" prefHeight="397.0" prefWidth="643.0">
+                                             <columns>
+                                                <TableColumn fx:id="codeProgramCourse" prefWidth="106.0" text="Code" />
+                                                <TableColumn fx:id="titleProgramCourse" prefWidth="207.0" text="Title" />
+                                                <TableColumn fx:id="levelProgramCourse" prefWidth="147.0" text="Level" />
+                                                <TableColumn fx:id="gradeProgramCourse" prefWidth="67.0" text="P. Grade" />
+                                                <TableColumn fx:id="creditsProgramCourse" prefWidth="57.0" text="Credits" />
+                                                <TableColumn fx:id="coreProgramCourse" prefWidth="58.0" text="Core?" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="4.0" layoutY="26.0" style="-fx-font-weight: bold;" text="Semester: " textFill="#3a3ab8" />
+                                          <JFXComboBox fx:id="semesterboxProgram" layoutX="67.0" layoutY="7.0" onAction="#displayProgramCourseSemDetails" prefHeight="31.0" prefWidth="130.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Students Enrolled">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="programStudentsTable" layoutX="5.0" layoutY="52.0" prefHeight="393.0" prefWidth="642.0">
+                                            <columns>
+                                              <TableColumn fx:id="programStudentsTableRef" prefWidth="86.0" text="Ref. Num." />
+                                              <TableColumn fx:id="programStudentsTableName" prefWidth="298.0" text="Name" />
+                                                <TableColumn fx:id="programStudentsTableLevel" prefWidth="142.0" text="Level" />
+                                                <TableColumn fx:id="programStudentsTableYear" prefWidth="113.0" text="Entrance Year" />
+                                            </columns>
+                                          </TableView>
+                                          <JFXTextField fx:id="nameStudentSearch" layoutX="10.0" layoutY="14.0" onKeyReleased="#researchStudentPrograme" prefHeight="29.0" prefWidth="339.0" promptText="Search" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Course Management">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="328.0" layoutY="-2.0" text="Course Management" textFill="#2b5775">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="searchCourse" alignment="CENTER" layoutX="14.0" layoutY="73.0" onKeyReleased="#searchCourse" prefHeight="35.0" prefWidth="402.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="registerCourse" layoutX="14.0" layoutY="124.0" onAction="#toADDPageCourse" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2b5775;" text="New Course" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="editCourse" layoutX="147.0" layoutY="124.0" onAction="#toModifyCourse" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Edit" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteCourse" layoutX="235.0" layoutY="124.0" onAction="#deleteCourse" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Delete" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="courseTable" layoutX="14.0" layoutY="166.0" onMouseClicked="#showCourseDetails" prefHeight="463.0" prefWidth="402.0">
+                          <columns>
+                            <TableColumn fx:id="courseCode" prefWidth="75.0" text="Code" />
+                            <TableColumn fx:id="courseTitle" prefWidth="180.0" text="Title" />
+                              <TableColumn fx:id="courseDescription" minWidth="0.0" prefWidth="146.0" text="Description" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="619.0" layoutY="64.0" text="Course Details" textFill="#e8dddd">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TabPane layoutX="424.0" layoutY="166.0" prefHeight="468.0" prefWidth="558.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Course Details">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="80.0" layoutY="16.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Code" />
+                                          <Label layoutX="76.0" layoutY="47.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Hours" />
+                                          <Label layoutX="87.0" layoutY="81.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Title" />
+                                          <Label layoutX="46.0" layoutY="117.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Description" />
+                                          <Label layoutX="10.0" layoutY="168.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Pre/Co Requisites" />
+                                          <JFXTextField fx:id="codeCourse" editable="false" layoutX="125.0" layoutY="2.0" />
+                                          <JFXTextField fx:id="hoursCourse" editable="false" layoutX="126.0" layoutY="35.0" />
+                                          <JFXTextField fx:id="titleCourse" editable="false" layoutX="126.0" layoutY="72.0" prefHeight="25.0" prefWidth="316.0" />
+                                          <TextArea fx:id="descriptionCourse" editable="false" layoutX="127.0" layoutY="116.0" prefHeight="49.0" prefWidth="316.0" />
+                                          <TableView fx:id="requisitesDetails" layoutX="127.0" layoutY="172.0" prefHeight="108.0" prefWidth="315.0">
+                                             <columns>
+                                                <TableColumn fx:id="courseCodeTable" prefWidth="106.0" text="Code" />
+                                                <TableColumn fx:id="courseTitleTable" prefWidth="209.0" text="Title" />
+                                             </columns>
+                                          </TableView>
+                                          <TitledPane fx:id="courseOpenedPane" animated="false" layoutX="123.0" layoutY="287.0" prefHeight="143.0" prefWidth="434.0" style="-fx-background-color: white;" text="Course Status">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="111.0" prefWidth="322.0" style="-fx-background-color: white;">
+                                                   <children>
+                                                      <TableView fx:id="tableCouresesOpen" layoutX="-1.0" layoutY="2.0" prefHeight="113.0" prefWidth="379.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="semesterCourseOpened" prefWidth="188.0" text="Semester" />
+                                                          <TableColumn fx:id="yearCourseOpened" prefWidth="182.0" text="Year" />
+                                                        </columns>
+                                                      </TableView>
+                                                      <Button fx:id="addCourseOpened" layoutX="383.0" layoutY="2.0" mnemonicParsing="false" onAction="#addCourseOpenedAction" opacity="1.0" prefHeight="20.0" prefWidth="23.0" style="-fx-background-color: white;">
+                                                         <graphic>
+                                                            <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Resource/images/plus.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="editCourseOffered" layoutX="383.0" layoutY="41.0" mnemonicParsing="false" onAction="#editCourseOfferedAction" opacity="1.0" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                                                         <graphic>
+                                                            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Resource/images/edit.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="deleteCourseOpened" layoutX="384.0" layoutY="77.0" mnemonicParsing="false" onAction="#deleteCourseOpenedAction" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                                                         <graphic>
+                                                            <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="520.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Resource/images/minus.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Students Registered">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="programStudentsTableStudent" layoutX="4.0" layoutY="48.0" prefHeight="387.0" prefWidth="547.0">
+                                             <columns>
+                                                <TableColumn fx:id="programStudentsTableRefStudent" prefWidth="115.0" text="Ref. Num." />
+                                                <TableColumn fx:id="programStudentsTableNameStudent" prefWidth="298.0" text="Name" />
+                                                <TableColumn fx:id="programStudentsTableLevelStudent" prefWidth="131.0" text="Semester" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="14.0" layoutY="23.0" style="-fx-font-weight: bold;" text="Semester: " textFill="#3a3ab8" />
+                                          <JFXComboBox fx:id="semesterCourseStudentBox" layoutX="86.0" layoutY="7.0" onAction="#displayStudentCourseDetailsSem" prefHeight="31.0" prefWidth="130.0" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Student Management">
+               <content>
+                  <AnchorPane id="AnchorPane" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="470.0" layoutY="180.0" text="ID" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="470.0" layoutY="217.0" text="Name" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="470.0" layoutY="251.0" text="Level" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="470.0" layoutY="282.0" prefHeight="35.0" prefWidth="105.0" text="Department" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="473.0" layoutY="394.0" text="Email" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="472.0" layoutY="497.0" text="Birthday" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="618.0" layoutY="69.0" text="Student Details" textFill="#e5dedc">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="searchStudent" alignment="CENTER" labelFloat="true" layoutX="14.0" layoutY="60.0" onKeyReleased="#searchStudent" prefHeight="25.0" prefWidth="388.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="iDtextStudent" layoutX="590.0" layoutY="175.0" prefHeight="25.0" prefWidth="156.0" />
+                        <JFXTextField fx:id="nametextStudent" layoutX="590.0" layoutY="209.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="statustextStudent" layoutX="590.0" layoutY="244.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="470.0" layoutY="357.0" text="Phone" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="deptextStudent" layoutX="590.0" layoutY="278.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="teltextStudent" layoutX="590.0" layoutY="350.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="emailtextStudent" layoutX="590.0" layoutY="386.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="472.0" layoutY="428.0" text="Gender" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="gendertextStudent" layoutX="590.0" layoutY="421.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="birthdaytextStudent" layoutX="592.0" layoutY="494.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="315.0" layoutY="3.0" text="Student Management" textFill="#2b5775">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="registerStudent" layoutX="16.0" layoutY="124.0" onAction="#toADDPage" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #2b5775;" text="New Student" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="EditStudent" layoutX="146.0" layoutY="124.0" onAction="#toModifyPage" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Edit" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteStudent" layoutX="240.0" layoutY="124.0" onAction="#delete" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Delete" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="table" layoutX="14.0" layoutY="160.0" onMouseClicked="#display" prefHeight="479.0" prefWidth="430.0">
+                           <columns>
+                              <TableColumn fx:id="nameStudentCol" prefWidth="189.0" text="Name" />
+                              <TableColumn fx:id="telStudentCol" prefWidth="117.0" text="Phone" />
+                              <TableColumn fx:id="statusStudentCol" prefWidth="123.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="470.0" layoutY="459.0" text="Address" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="addresstextStudent" layoutX="591.0" layoutY="457.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="472.0" layoutY="539.0" text="Parent Infos." textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="studParentInfo" layoutX="593.0" layoutY="533.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="472.0" layoutY="578.0" text="Entrance year " textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="studEntranceYear" layoutX="593.0" layoutY="571.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="470.0" layoutY="317.0" prefHeight="35.0" prefWidth="105.0" text="Program" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="textStudProgram" layoutX="591.0" layoutY="314.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Pane layoutX="757.0" layoutY="109.0" prefHeight="114.0" prefWidth="126.0" />
+                        <JFXButton fx:id="studPersoSpace" layoutX="752.0" layoutY="605.0" onAction="#studentSpaceMgnt" prefHeight="30.0" prefWidth="203.0" style="-fx-background-color: green;" text="Student Personal Space" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fx:id="profileImageStudent" fitHeight="120.0" fitWidth="115.0" layoutX="840.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resource/images/default.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Faculty Management">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="322.0" layoutY="1.0" text="Faculty Management" textFill="#2b5775">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="192.0" style="-fx-font-size: 13;" text="Name" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="292.0" style="-fx-font-size: 13;" text="Address" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="319.0" prefHeight="27.0" prefWidth="127.0" style="-fx-font-size: 13;" text="Phone Number" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="349.0" style="-fx-font-size: 13;" text="Email" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="379.0" style="-fx-font-size: 13;" text="Office" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="413.0" style="-fx-font-size: 13;" text="Position" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="446.0" style="-fx-font-size: 13;" text="Office Hours" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="481.0" style="-fx-font-size: 13;" text="Salary" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="516.0" style="-fx-font-size: 13;" text="Gender" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="550.0" style="-fx-font-size: 13;" text="Date Hired" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="584.0" layoutY="72.0" text="Faculty's Details" textFill="#e8dddd">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="searchFaculty" alignment="CENTER" layoutX="14.0" layoutY="64.0" onKeyReleased="#searchFaculty" prefHeight="25.0" prefWidth="388.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="registerFaculty" layoutX="16.0" layoutY="109.0" onAction="#toADDPageFaculty" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #2b5775;" text="New Faculty" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="EditFaculty" layoutX="159.0" layoutY="109.0" onAction="#toModifyPageFaculty" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Edit" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteFaculty" layoutX="250.0" layoutY="109.0" onAction="#deleteFaculty" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Delete" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="tableFaculty" layoutX="14.0" layoutY="145.0" onMouseClicked="#displayFaculty" prefHeight="479.0" prefWidth="388.0">
+                           <columns>
+                              <TableColumn fx:id="facultyTitleCol" prefWidth="47.0" text="Title" />
+                              <TableColumn fx:id="nameFacultyCol" prefWidth="245.0" text="Name" />
+                              <TableColumn fx:id="telFacultyCol" prefWidth="93.0" text="Phone" />
+                           </columns>
+                        </TableView>
+                        <JFXTextField fx:id="nameFaculty" layoutX="576.0" layoutY="175.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="genderFaculty" layoutX="576.0" layoutY="509.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="salaryFaculty" layoutX="576.0" layoutY="474.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="officehoursFaculty" layoutX="576.0" layoutY="439.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="rankFaculty" layoutX="576.0" layoutY="406.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="officeFaculty" layoutX="576.0" layoutY="372.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="emailFaculty" layoutX="576.0" layoutY="342.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="phonenumberFaculty" layoutX="576.0" layoutY="312.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="adressFaculty" layoutX="576.0" layoutY="281.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="datehiredFaculty" layoutX="576.0" layoutY="543.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="434.0" layoutY="586.0" style="-fx-font-size: 13;" text="Date of Birth" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="datebirthFaculty" layoutX="576.0" layoutY="578.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="435.0" layoutY="157.0" style="-fx-font-size: 13;" text="Title" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="436.0" layoutY="223.0" style="-fx-font-size: 13;" text="Specialty" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="facultySpecialty" layoutX="577.0" layoutY="209.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="436.0" layoutY="259.0" style="-fx-font-size: 13;" text="Department" textFill="#3a3ab8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="depText" layoutX="577.0" layoutY="246.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="titleTxfiel" layoutX="576.0" layoutY="140.0" prefHeight="25.0" prefWidth="47.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Staff Mangement">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXTextField fx:id="searchStaff" alignment="CENTER" layoutX="14.0" layoutY="54.0" onKeyReleased="#searchStaff" prefHeight="25.0" prefWidth="388.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="EditStaff" layoutX="154.0" layoutY="119.0" onAction="#modifyStaff" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Edit" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="registerStaff" layoutX="16.0" layoutY="119.0" onAction="#toADDPageStaff" prefHeight="30.0" prefWidth="119.0" style="-fx-background-color: #2b5775;" text="New Staff" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteStaff" layoutX="246.0" layoutY="119.0" onAction="#deleteStaff" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Delete" textFill="#d0dae1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="tableStaff" layoutX="14.0" layoutY="154.0" onMouseClicked="#displayStaff" prefHeight="479.0" prefWidth="478.0">
+                          <columns>
+                              <TableColumn fx:id="staffTitleCol" prefWidth="37.0" text="Title" />
+                            <TableColumn fx:id="nameStaffCol" prefWidth="235.0" text="Name" />
+                            <TableColumn fx:id="telStaffCol" prefWidth="89.0" text="Phone" />
+                              <TableColumn fx:id="staffPositionCol" prefWidth="116.0" text="Position" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="580.0" layoutY="44.0" text="Staff's Details" textFill="#e8dddd">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="551.0" layoutY="184.0" text="Name" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="557.0" layoutY="310.0" text="Email" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="531.0" layoutY="265.0" text="Office N°" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="538.0" layoutY="218.0" text="Position" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="333.0" layoutY="-2.0" text="Staff Management" textFill="#2b5775">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="540.0" layoutY="408.0" text="Address" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="497.0" layoutY="448.0" prefHeight="27.0" prefWidth="101.0" text="Phone Number" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="553.0" layoutY="502.0" text="Salary" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="524.0" layoutY="550.0" text="Date Hired" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="nameStaff" layoutX="600.0" layoutY="169.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="titleStaff" layoutX="601.0" layoutY="212.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="officeStaff" layoutX="603.0" layoutY="257.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="emailStaff" layoutX="603.0" layoutY="305.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="adressStaff" layoutX="602.0" layoutY="398.0" prefHeight="25.0" prefWidth="366.0" />
+                        <JFXTextField fx:id="phonenumberStaff" layoutX="604.0" layoutY="445.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="salaryStaff" layoutX="603.0" layoutY="493.0" prefHeight="25.0" prefWidth="362.0" />
+                        <JFXTextField fx:id="datehiredStaff" layoutX="604.0" layoutY="539.0" prefHeight="25.0" prefWidth="362.0">
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                        </JFXTextField>
+                        <JFXTextField fx:id="genderStaff" layoutX="603.0" layoutY="352.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="547.0" layoutY="356.0" text="Gender" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="595.0" text="Date of Birth" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="datebirthStaff1" layoutX="604.0" layoutY="584.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Label layoutX="561.0" layoutY="139.0" text="Title" textFill="#3a3ab8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="staffMgntTitle" layoutX="599.0" layoutY="129.0" prefHeight="25.0" prefWidth="83.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Grade Management">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="282.0" layoutY="9.0" prefHeight="53.0" prefWidth="417.0" text="Grade Management" textFill="#2b5775">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TabPane layoutX="12.0" layoutY="78.0" prefHeight="548.0" prefWidth="869.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0">
+                          <tabs>
+                            <Tab text="Final Grades">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="26.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Program: " textFill="#3a3ab8" />
+                                          <Label layoutX="238.0" layoutY="53.0" prefWidth="57.0" style="-fx-font-weight: bold;" text="Course: " textFill="#3a3ab8" />
+                                          <Label layoutX="27.0" layoutY="53.0" style="-fx-font-weight: bold;" text="Semester: " textFill="#3a3ab8" />
+                                          <JFXComboBox fx:id="programbox" layoutX="101.0" layoutY="13.0" onAction="#changeSemesterlist" prefHeight="31.0" prefWidth="347.0" promptText="Program" />
+                                          <JFXComboBox fx:id="coursebox" layoutX="303.0" layoutY="48.0" prefHeight="31.0" prefWidth="375.0" />
+                                          <JFXComboBox fx:id="semesterbox" layoutX="101.0" layoutY="48.0" onAction="#changeCourselist" prefHeight="31.0" prefWidth="130.0" />
+                                          <JFXButton fx:id="goButton" layoutX="700.0" layoutY="48.0" onAction="#goButtonAction" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #2b5775;" text="Search" textFill="#d0dae1" />
+                                          <TableView fx:id="tcoursegrade" layoutX="27.0" layoutY="81.0" prefHeight="398.0" prefWidth="899.0">
+                                            <columns>
+                                              <TableColumn fx:id="tstudentname" prefWidth="732.0" text="Student Name" />
+                                              <TableColumn fx:id="tstudentgrade" onEditCommit="#editGradeAction" prefWidth="166.0" text="Grade" />
+                                            </columns>
+                                          </TableView>
+                                          <JFXButton fx:id="saveButton" layoutX="795.0" layoutY="488.0" onAction="#saveButtonAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #2b5775;" text="Save " textFill="#d0dae1" />
+                                          <JFXButton fx:id="printResult1" layoutX="638.0" layoutY="488.0" onAction="#printResultActionFinalResult" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: green;" text="Results Report" textFill="#d0dae1" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Other evaluations">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="31.0" layoutY="24.0" style="-fx-font-weight: bold;" text="Program: " textFill="#3a3ab8" />
+                                          <Label layoutX="31.0" layoutY="59.0" prefHeight="17.0" prefWidth="50.0" style="-fx-font-weight: bold;" text="Course: " textFill="#3a3ab8" />
+                                          <Label layoutX="417.0" layoutY="30.0" style="-fx-font-weight: bold;" text="Semester: " textFill="#3a3ab8" />
+                                          <JFXComboBox fx:id="programTestBox" layoutX="88.0" layoutY="10.0" onAction="#changeSemesterTestList" prefHeight="31.0" prefWidth="325.0" promptText="Program" />
+                                          <JFXComboBox fx:id="courseTestBox" layoutX="87.0" layoutY="44.0" prefHeight="31.0" prefWidth="326.0" />
+                                          <JFXComboBox fx:id="semesterTestBox" layoutX="484.0" layoutY="16.0" onAction="#changeCourseTestList" prefHeight="31.0" prefWidth="121.0" />
+                                          <JFXButton fx:id="goButtonTest" layoutX="858.0" layoutY="21.0" onAction="#goButtonActionG" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #2b5775;" text="Search" textFill="#d0dae1" />
+                                          <Label layoutX="415.0" layoutY="59.0" style="-fx-font-weight: bold;" text="Type Eval :" textFill="#3a3ab8" />
+                                          <JFXComboBox fx:id="testTypeBox" layoutX="481.0" layoutY="52.0" prefHeight="25.0" prefWidth="124.0" />
+                                          <TableView fx:id="tCourseOtherGrades" layoutX="27.0" layoutY="84.0" prefHeight="379.0" prefWidth="911.0">
+                                             <columns>
+                                                <TableColumn fx:id="tOGStudentCode" onEditCommit="#editCodeAction" prefWidth="121.0" text="Anonymous Code" />
+                                                <TableColumn fx:id="tOGStudent" prefWidth="427.0" text="Student Name and Surname" />
+                                                <TableColumn fx:id="tOGStudentRegistration" minWidth="0.0" prefWidth="159.0" text="Registration Number" />
+                                                <TableColumn fx:id="tOGStudentGrade" minWidth="0.0" onEditCommit="#editGradeActionG" prefWidth="120.0" text="Score" />
+                                                <TableColumn fx:id="letterGradeTest" prefWidth="82.0" text="Letter Grade" />
+                                             </columns>
+                                          </TableView>
+                                          <JFXButton fx:id="saveTestGrade" layoutX="806.0" layoutY="471.0" onAction="#saveButtonActionTests" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #2b5775;" text="Save Changes" textFill="#d0dae1" />
+                                          <Label layoutX="606.0" layoutY="31.0" style="-fx-font-weight: bold;" text="Date Eval : " textFill="#3a3ab8" />
+                                          <JFXDatePicker fx:id="dateEnregTest" layoutX="672.0" layoutY="22.0" prefHeight="28.0" prefWidth="158.0" promptText="Date Eval" />
+                                          <Label layoutX="607.0" layoutY="61.0" style="-fx-font-weight: bold;" text="Current Date : " textFill="#3a3ab8" />
+                                          <JFXDatePicker fx:id="currentDate" layoutX="687.0" layoutY="49.0" prefHeight="28.0" prefWidth="143.0" promptText="Date of Today" />
+                                          <JFXButton fx:id="goButtonNewEval" layoutX="858.0" layoutY="53.0" onAction="#goButtonActionNewEval" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: green;" text="New Eval" textFill="#d0dae1" />
+                                          <JFXButton fx:id="printResult" layoutX="661.0" layoutY="471.0" onAction="#printResultAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: green;" text="Results Report" textFill="#d0dae1" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Course Scheduling">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="86.0" layoutY="14.0" prefHeight="53.0" prefWidth="797.0" text="Course Scheduling and Attendance Management" textFill="#2b5775">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableSche" layoutX="9.0" layoutY="162.0" prefHeight="432.0" prefWidth="911.0">
+                          <columns>
+                            <TableColumn fx:id="tableScheCCol" prefWidth="288.0" text="Course Name" />
+                            <TableColumn fx:id="tableScheDayCol" prefWidth="100.0" text="Day" />
+                              <TableColumn fx:id="tableScheDateCol" prefWidth="81.0" text="Date" />
+                              <TableColumn fx:id="tableScheSTimeCol" prefWidth="77.0" text="Start time" />
+                              <TableColumn fx:id="tableScheETimeCol" prefWidth="76.0" text="End time" />
+                              <TableColumn fx:id="tableSchePlaceCol" prefWidth="96.0" text="Place" />
+                              <TableColumn fx:id="tableScheLecCol" prefWidth="189.0" text="Lecturer" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="90.0" style="-fx-font-weight: bold;" text="Program: " textFill="#3a3ab8" />
+                        <Label layoutX="240.0" layoutY="126.0" prefHeight="21.0" prefWidth="58.0" style="-fx-font-weight: bold;" text="Course: " textFill="#3a3ab8" />
+                        <Label layoutX="14.0" layoutY="124.0" prefHeight="25.0" prefWidth="76.0" style="-fx-font-weight: bold;" text="Semester: " textFill="#3a3ab8" />
+                        <JFXComboBox fx:id="programScheBox" layoutX="86.0" layoutY="74.0" onAction="#changeSemesterSchedulelist" prefHeight="31.0" prefWidth="325.0" promptText="Program" />
+                        <JFXComboBox fx:id="courseScheBox" layoutX="302.0" layoutY="121.0" prefHeight="31.0" prefWidth="380.0" />
+                        <JFXComboBox fx:id="semesterScheBox" layoutX="86.0" layoutY="121.0" onAction="#changeCourseSchedulelist" prefHeight="31.0" prefWidth="145.0" />
+                        <Label layoutX="421.0" layoutY="90.0" style="-fx-font-weight: bold;" text="Date" textFill="#3a3ab8" />
+                        <JFXDatePicker fx:id="dateScheTest" layoutX="455.0" layoutY="78.0" prefHeight="28.0" prefWidth="130.0" promptText="Date" />
+                        <JFXButton fx:id="goButtonSche" layoutX="746.0" layoutY="121.0" onAction="#searchSchedules" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #2b5775;" text="Search" textFill="#d0dae1" />
+                        <Button fx:id="addSchedule" layoutX="927.0" layoutY="165.0" mnemonicParsing="false" onAction="#addSchedules" opacity="1.0" prefHeight="20.0" prefWidth="23.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/images/plus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Add a new schedule" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="editSchedule" layoutX="925.0" layoutY="208.0" mnemonicParsing="false" onAction="#modifySchedules" opacity="1.0" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/images/edit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Modify a schedule" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="deleteSchedule" layoutX="926.0" layoutY="288.0" mnemonicParsing="false" onAction="#deleteSchedules" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="520.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/images/minus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Delete a schedule" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="editSchedule1" layoutX="927.0" layoutY="333.0" mnemonicParsing="false" onAction="#modifyStudentAttendance" opacity="1.0" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="520.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;">
+                                 <image>
+                                    <Image url="@../Resource/images/001-multiple-users-silhouette.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Manage attendances" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="duplicateSchedule" layoutX="923.0" layoutY="242.0" mnemonicParsing="false" onAction="#duplicateSchedules" prefHeight="47.0" prefWidth="52.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/images/duplicate.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Duplicate the row" />
+                           </tooltip>
+                        </Button>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

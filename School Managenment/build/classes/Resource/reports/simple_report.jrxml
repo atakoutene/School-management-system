@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="simple_report" pageWidth="595" pageHeight="842" columnWidth="565" leftMargin="20" rightMargin="10" topMargin="10" bottomMargin="10" uuid="2b6b99d9-3bbd-4344-9ebc-1b92719a9276">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="635"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="dataset1" uuid="8b4e6e95-6299-4c47-bfc6-20713ad8c10a">
+		<parameter name="id_program" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="sem_year" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="sem_name" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_level" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[$P{id_program}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_student" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select distinct
+	c.code as coursecode,
+	c.title as coursetitle,
+	pc.nb_credits as nbCredits
+
+from student s, course_offered co, student_course sc, course c, program_course pc, person pers
+where co.id_course=c.id and
+	pc.id_course = c.id and
+	pc.id_program = $P{id_program} and
+	co.id = sc.id_course_offered and
+	s.id = sc.id_student and
+	co.id_semester = pc.id_semester and
+	co.course_year = $P{sem_year} and
+	co.course_sem = $P{sem_name} and
+	pers.id = s.id_person and
+	sc.id_student = $P{id_student};]]>
+		</queryString>
+		<field name="coursecode" class="java.lang.String"/>
+		<field name="coursetitle" class="java.lang.String"/>
+		<field name="nbCredits" class="java.lang.Double"/>
+	</subDataset>
+	<parameter name="id_program" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{id_program}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sem_year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{sem_year}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sem_name" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{sem_name}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_level" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{id_level}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_student" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{id_student}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imagesDir" class="Object" isForPrompting="false">
+		<parameterDescription><![CDATA[The logo image]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select distinct
+	count(*) as numberofcourses,
+	co.id as idCourseOffered,
+	c.id as idCourse,
+	c.code as coursecode,
+	co.id as idCourseOffered,
+	c.id as idCourse,
+	c.code as coursecode,
+	c.description as coursedescription,
+	c.title as coursetitle,
+	c.hours as coursehours,
+	pc.passing_grade as passing_grade,
+	pc.nb_credits as nbCredits,
+	sc.grade as grade,
+	sc.score as score,
+	pers.name as studentName,
+	pers.phonenumber as phone,
+	pers.email as email,
+	pers.placeofbirth as placebirth,
+	dte.jour as daybirth,
+	dte.mois as monthbirth,
+	dte.annee as yearbirth,
+	s.studentid as regNum,
+	s.level as studentlevel,
+	s.profilepicture as photo,
+	p.title as studentprogram,
+	sum(pc.nb_credits) as totalcredits
+
+
+from student s, course_offered co, student_course sc, course c, program_course pc, program p, person pers, mydate dte
+where co.id_course=c.id and
+	pc.id_course = c.id and
+	p.id = pc.id_program and
+	co.id = sc.id_course_offered
+	and s.id = sc.id_student and
+	pers.id = s.id_person and
+	pers.id_date_birth = dte.id and
+	p.id = $P{id_program} and
+	co.id_semester = pc.id_semester and
+	co.course_year = $P{sem_year} and
+	co.course_sem = $P{sem_name} and
+	sc.id_student = $P{id_student};]]>
+	</queryString>
+	<field name="numberofcourses" class="java.lang.Long"/>
+	<field name="idCourseOffered" class="java.lang.Integer"/>
+	<field name="idCourse" class="java.lang.Integer"/>
+	<field name="coursecode" class="java.lang.String"/>
+	<field name="coursedescription" class="java.lang.String"/>
+	<field name="coursetitle" class="java.lang.String"/>
+	<field name="coursehours" class="java.lang.Integer"/>
+	<field name="passing_grade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nbCredits" class="java.lang.Double"/>
+	<field name="grade" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="score" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="phone" class="java.lang.Integer"/>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="placebirth" class="java.lang.String"/>
+	<field name="daybirth" class="java.lang.Integer"/>
+	<field name="monthbirth" class="java.lang.Integer"/>
+	<field name="yearbirth" class="java.lang.Integer"/>
+	<field name="regNum" class="java.lang.String"/>
+	<field name="studentlevel" class="java.lang.String"/>
+	<field name="photo" class="java.io.InputStream"/>
+	<field name="studentprogram" class="java.lang.String"/>
+	<field name="totalcredits" class="java.lang.Double"/>
+	<title>
+		<band height="260">
+			<image scaleImage="RetainShape">
+				<reportElement x="452" y="3" width="108" height="116" uuid="26535721-0f56-44a7-8b6a-47cac7055886"/>
+				<imageExpression><![CDATA[$F{photo}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="1" y="129" width="550" height="1" uuid="67e9d71e-9a42-49a5-b35a-7a269039d50b"/>
+			</line>
+			<staticText>
+				<reportElement x="58" y="5" width="181" height="16" uuid="838c9b24-c805-4724-9429-2a0fe4427ac7"/>
+				<textElement>
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PKFokam Institute of Excellence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="22" width="178" height="18" uuid="675301b5-b934-466a-af40-370debd2d4c4"/>
+				<textElement>
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Dignity - Faith - Responsibility]]></text>
+			</staticText>
+			<line>
+				<reportElement x="59" y="66" width="350" height="1" uuid="1122a467-1199-4ea2-be65-84275f4339f1"/>
+			</line>
+			<staticText>
+				<reportElement x="63" y="45" width="340" height="20" uuid="6d8dd53d-19ec-4ef6-91e1-84d101e469dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[P.O Box 11646 Yaunde, Cameroon / Tel: (237) 22 01 90 27 / Website: www.pkfinstitute.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="78" width="345" height="23" uuid="4605dda8-70c4-458b-8532-4d3434d6553a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria Math" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNDERGRADUATE COURSE REGISTRATION FORM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="22" width="20" height="75" uuid="00e1a57e-0a79-4411-9045-0eee363d58b8"/>
+				<textElement textAlignment="Center" rotation="Left">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Passport size]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="101" width="59" height="20" uuid="54c1524d-5cec-4ad1-b198-fd7723d78aeb"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Semester : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="229" y="101" width="53" height="20" uuid="b9bd8055-88df-4136-be59-07ca65c26b23"/>
+				<textElement>
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sem_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="101" width="100" height="20" uuid="728f812c-a7b8-437e-b5a6-74f09cedb49c"/>
+				<textElement>
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sem_year}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="135" width="563" height="20" uuid="1b904dee-2fec-4b6f-ba11-3a87da188624"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="155" width="563" height="20" uuid="93d03198-454e-4028-be2c-692e5a6b2178"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="175" width="356" height="20" uuid="78beb025-1fe3-43e2-bb3d-adc15617556a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="195" width="356" height="20" uuid="e5a6fac8-131e-420e-b418-d481336a4347"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="356" y="175" width="207" height="20" uuid="906b7288-7041-45f9-aade-560e963644d2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="356" y="195" width="207" height="20" uuid="baa1977d-9356-4987-9d87-0014cb88400b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="135" width="87" height="20" uuid="c83e9ac3-6907-4a5b-bdae-69217c4c120e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Student Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="156" width="144" height="20" uuid="dd37f5ae-55e0-431e-abac-9a13e064833f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Contact  (Tel & email) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="174" width="191" height="20" uuid="3f06e538-33a0-4425-9dd4-b74ea0b4e933"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Date and Place of birth (mm / dd / yy) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="195" width="86" height="20" uuid="4113f1bf-e02a-42da-a19d-fe0abe31da32"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Program Studies :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="175" width="86" height="20" uuid="3602d619-cef5-46e9-b026-c789149ddf10"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Student Reg. No. :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="194" width="99" height="20" uuid="e20cf3d8-3dc8-43ab-9bf4-8447909f3846"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Level of studies *:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="234" width="375" height="20" uuid="698213ba-2856-4dc9-81a2-d2088c5594fc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COURSES TO BE TAKEN DURING THE SEMESTER]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="3" width="55" height="58" uuid="78fc5e70-7003-4a6e-9a8b-caecb0a6ce42"/>
+				<imageExpression><![CDATA[$P{imagesDir}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="91" y="134" width="470" height="19" uuid="69335610-5031-473c-af2f-e731d4ef05ab"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="156" width="119" height="20" uuid="afc10246-8f40-4fe8-b831-bda802de0d30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{phone}!= 0) ? $F{phone}: ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="156" width="132" height="20" uuid="6d4398a0-dd44-4760-a376-c537b7700f98"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{email}!= null) ? $F{email}: ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="175" width="15" height="20" uuid="1e20abde-ab1b-4283-862d-c550796bac6d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{monthbirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="175" width="15" height="20" uuid="7114e079-0f79-41fc-96c2-aa2076847309"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{daybirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="175" width="25" height="20" uuid="d7000868-88b0-4369-9ed6-70ad62d7a905"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{yearbirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="209" y="175" width="6" height="20" uuid="233e3d35-dedb-4642-aaca-75ad91e31e9a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="175" width="6" height="20" uuid="f56529b3-f363-4928-90ab-31cfb5aeb4f0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="175" width="77" height="20" uuid="1a3b4c7d-60a3-41cd-b944-a62b16a5f722"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" - " + $F{placebirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="176" width="100" height="18" uuid="6ab149d6-9c10-4e11-a23a-011c455a974a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{regNum}!= null) ? $F{regNum}: ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="96" y="195" width="258" height="20" uuid="9feb937a-5118-4adc-9047-89e214176ac6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentprogram}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="194" width="100" height="20" uuid="779fac1c-c911-480f-913b-238e8c044d2f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentlevel}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="518">
+			<componentElement>
+				<reportElement key="table 7" style="table 7" x="0" y="0" width="565" height="293" uuid="3da82e6f-6cbe-404c-ada7-1898c2ba7053"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="dataset1" uuid="f7c0c7e1-7597-4e43-af32-601750912e7c">
+						<datasetParameter name="id_program">
+							<datasetParameterExpression><![CDATA[$P{id_program}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="sem_year">
+							<datasetParameterExpression><![CDATA[$P{sem_year}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="sem_name">
+							<datasetParameterExpression><![CDATA[$P{sem_name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_level">
+							<datasetParameterExpression><![CDATA[$P{id_level}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_student">
+							<datasetParameterExpression><![CDATA[$P{id_student}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="a9216a2c-a281-4d8f-b5c8-3a9bed2042d6">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="487d4b12-f976-4c87-9f3c-5b90b94db063"/>
+								<textElement textAlignment="Center">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Code]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="6" y="0" width="77" height="20" uuid="9123d693-2fc8-4d79-8da2-80aef611a8c1"/>
+								<textElement>
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{coursecode}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="388" uuid="d1235035-4c0a-4f1b-a6ab-1e16c7814825">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="388" height="30" uuid="6753094a-6278-470b-ae32-78ad49648f6b"/>
+								<textElement textAlignment="Center">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Course Title]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="7" y="0" width="364" height="20" uuid="01a319ae-070c-4ec8-b26d-cb0444dc3eb2"/>
+								<textElement>
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{coursetitle}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="86" uuid="64028fcc-b948-41cf-852c-6438b3743ffa">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="83" height="30" uuid="d4d73d9d-fcc7-48a4-878e-6a37fdb337fc"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Credits]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="2" y="0" width="83" height="20" uuid="a3d19253-63dc-42a2-bc65-2942482911b5"/>
+								<textElement>
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nbCredits}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="40" y="410" width="316" height="19" uuid="2a7d31ad-13b7-44fd-8563-82cf9b860b07"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Attach a copy of the tuition fees payment receipt to the filled form]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="457" width="316" height="15" uuid="8b5f0265-d0a9-44b6-a25a-78e54f9ad5ee"/>
+				<text><![CDATA[- Not take more than the fixed semester credits hours per program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="469" width="316" height="15" uuid="9ad0efe2-4286-4bc6-b435-4c80a16593e6"/>
+				<text><![CDATA[- Pass the corresponding prerequisites of course before taking it]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="484" width="372" height="15" uuid="14850add-a50a-42d8-a61c-a9d372954778"/>
+				<text><![CDATA[- Pay their tuition fees for the semester before writin the final semester exams]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="497" width="294" height="20" uuid="03b25670-adb5-4c3a-a2ba-aa47f241c8dc"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[* Preparatory, Freshman, Sophomore, Junior]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="411" y="453" width="148" height="62" uuid="fdc22ec1-9364-4f97-9bc4-37f81cf990ac"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="383" width="148" height="62" uuid="88a8e9e0-8461-42e5-bf3b-faa5088565f4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="321" width="148" height="55" uuid="f1bd3ff1-e464-4f3a-b322-7a25bd2b535a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="411" y="322" width="147" height="16" uuid="1a6c1d9a-ab85-44d5-99f0-773415f00776"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date and Signature, Head of Dept.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="386" width="132" height="16" uuid="4c1e231c-71f4-42ca-b927-0321d8ed6ae8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date and Signature, AAO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="458" width="141" height="16" uuid="f672588b-2d81-4a20-9195-408df7ffc65f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date and Signature, Financial O.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="17" y="348" width="132" height="60" uuid="fe379a88-2c49-44f6-a0c5-171b01da9125"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="17" y="304" width="132" height="16" uuid="c540d20b-0b30-4dda-913d-166ec3d430e1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Total number of courses :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="322" width="132" height="16" uuid="ad920660-73f9-4e37-9ba3-b2cf1ef219a4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Total number of credits :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="296" width="560" height="1" uuid="26378f70-33dc-4098-b5b2-a7466ddcb349"/>
+			</line>
+			<staticText>
+				<reportElement x="17" y="437" width="100" height="16" uuid="0e0258d8-321c-4362-b7b7-c6c282ff53fa"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Students must:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="410" width="23" height="19" uuid="4eb45847-25a7-4adc-b22b-bed7c436fcdf"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="11" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NB:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="348" width="132" height="16" uuid="81227e21-1fd7-4823-9bf2-dc8185a7ddae"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date and Signature, Student]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="304" width="100" height="16" uuid="29918a00-9686-4d4f-ada8-77efa267d71a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numberofcourses}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="322" width="100" height="16" uuid="c3de5f76-a911-4d73-9847-47e8728dbd2b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalcredits}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="programstudentslevel" pageWidth="595" pageHeight="842" columnWidth="565" leftMargin="20" rightMargin="10" topMargin="10" bottomMargin="10" uuid="2b6b99d9-3bbd-4344-9ebc-1b92719a9276">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="13"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="dataset1" uuid="8b4e6e95-6299-4c47-bfc6-20713ad8c10a">
+		<parameter name="id_program" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="sem_year" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="sem_name" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="semId" class="java.lang.Integer"/>
+		<parameter name="levelId" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select distinct pe.name as studentName, s.studentId as refNum, s.entrance_year as entrance_year, lev.name as studentLevel
+from person pe, student s, student_level sl, schoollevel lev
+where pe.id = s.id_person and s.id = sl.id_student and sl.id_level = lev.id and sl.id_semester = $P{semId} and s.id_program = $P{id_program} and lev.id = $P{levelId};]]>
+		</queryString>
+		<field name="studentName" class="java.lang.String"/>
+		<field name="refNum" class="java.lang.String"/>
+		<field name="entrance_year" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="studentLevel" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="id_program" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{id_program}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sem_year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{sem_year}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sem_name" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{sem_name}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imagesDir" class="Object" isForPrompting="false">
+		<parameterDescription><![CDATA[The logo image]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="programName" class="java.lang.String"/>
+	<parameter name="semId" class="java.lang.Integer"/>
+	<parameter name="levelId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select distinct pe.name as studentName, s.studentId as refNum, s.entrance_year as entrance_year, lev.name as studentLevel
+from person pe, student s, student_level sl, schoollevel lev
+where pe.id = s.id_person and s.id = sl.id_student and sl.id_level = lev.id and sl.id_semester = $P{semId} and s.id_program = $P{id_program} and lev.id = $P{levelId};]]>
+	</queryString>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="refNum" class="java.lang.String"/>
+	<field name="entrance_year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentLevel" class="java.lang.String"/>
+	<title>
+		<band height="152">
+			<line>
+				<reportElement x="1" y="149" width="564" height="1" uuid="67e9d71e-9a42-49a5-b35a-7a269039d50b"/>
+			</line>
+			<staticText>
+				<reportElement x="67" y="2" width="181" height="16" uuid="838c9b24-c805-4724-9429-2a0fe4427ac7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PKFokam Institute of Excellence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="19" width="178" height="18" uuid="675301b5-b934-466a-af40-370debd2d4c4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Dignity - Faith - Responsibility]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="70" width="563" height="2" uuid="1122a467-1199-4ea2-be65-84275f4339f1"/>
+			</line>
+			<staticText>
+				<reportElement x="67" y="37" width="327" height="20" uuid="6d8dd53d-19ec-4ef6-91e1-84d101e469dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[P.O Box 11646 Yaunde, Cameroon / Tel: (237) 22 01 90 27 / Website: www.pkfinstitute.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="2" width="62" height="68" uuid="78fc5e70-7003-4a6e-9a8b-caecb0a6ce42"/>
+				<imageExpression><![CDATA[$P{imagesDir}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="2" y="75" width="563" height="52" uuid="97fa832e-492e-44d6-8c7a-d3fb4175e136"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PROGRAM COURSES : " + $P{programName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="127" width="563" height="20" uuid="85d99efb-1ba3-44ff-9c91-85cae0d83cb2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Semester :" + $P{sem_name} + " " + $P{sem_year} + " - Students"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="214">
+			<componentElement>
+				<reportElement key="table 7" style="table 7" isPrintRepeatedValues="false" x="1" y="5" width="565" height="205" uuid="3da82e6f-6cbe-404c-ada7-1898c2ba7053"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="dataset1" uuid="bef5b6b2-d216-4db9-b443-a2d8c5d45400">
+						<datasetParameter name="id_program">
+							<datasetParameterExpression><![CDATA[$P{id_program}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="semId">
+							<datasetParameterExpression><![CDATA[$P{semId}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="levelId">
+							<datasetParameterExpression><![CDATA[$P{levelId}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="0768e5eb-abd5-49f7-b245-b24703bed82a">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="39" height="30" uuid="7a0ebc6b-5f55-4b79-8847-e821e3d94787"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[N°]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="25" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="1" width="40" height="22" uuid="2f9e3dcc-6bfe-42e0-8c6c-92494b3aba2a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="93" uuid="a9216a2c-a281-4d8f-b5c8-3a9bed2042d6">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="93" height="30" uuid="487d4b12-f976-4c87-9f3c-5b90b94db063"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Ref. Number]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="25" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="1" width="93" height="22" uuid="9123d693-2fc8-4d79-8da2-80aef611a8c1"/>
+								<box leftPadding="5"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{refNum}== null ? "" : $F{refNum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="242" uuid="d1235035-4c0a-4f1b-a6ab-1e16c7814825">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="241" height="30" uuid="6753094a-6278-470b-ae32-78ad49648f6b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="25" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="3" width="241" height="20" uuid="01a319ae-070c-4ec8-b26d-cb0444dc3eb2"/>
+								<box leftPadding="5"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="116" uuid="873185df-92e0-42c5-bb21-aed2d5227742">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="116" height="30" uuid="ebeaa561-b9b6-4dcd-a696-38885493830c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Level]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="25" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="116" height="22" uuid="e3a42c52-d5de-4c64-8c60-40fc22cb05b7"/>
+								<box leftPadding="5"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studentLevel}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="49487bab-421f-48e1-8ebf-411f914deeed">
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="66" height="30" uuid="48a4cc60-aaed-417d-87d7-3e17abd7ef2d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Entr. Year]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="25" rowSpan="1">
+							<textField>
+								<reportElement x="1" y="0" width="66" height="22" uuid="10112747-1884-47a2-9ed1-93b87780a1b5"/>
+								<box leftPadding="5"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{entrance_year} == null ?"":$F{entrance_year}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

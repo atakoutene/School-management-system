@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="161.0" prefWidth="288.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="View.ChangeLevelFXMLController">
+   <children>
+      <Label layoutX="36.0" layoutY="51.0" prefHeight="17.0" prefWidth="37.0" text="Level:" />
+      <Label layoutX="14.0" layoutY="84.0" prefHeight="17.0" prefWidth="57.0" text="Semester:" />
+      <Label layoutX="10.0" layoutY="14.0" prefHeight="19.0" prefWidth="259.0" style="-fx-alignment: center; -fx-font-family: &quot;times new roman&quot;; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: navy;" text="Student Level Management" />
+      <JFXComboBox fx:id="levelCombo" layoutX="73.0" layoutY="39.0" prefHeight="25.0" prefWidth="184.0" />
+      <JFXComboBox fx:id="semesterCombo" layoutX="71.0" layoutY="74.0" prefHeight="25.0" prefWidth="184.0" />
+      <JFXButton fx:id="saveButton" layoutX="156.0" layoutY="122.0" onAction="#onSave" style="-fx-background-color: #2b5775;" text="Save" textFill="#f2eeee" />
+      <JFXButton fx:id="cancelButton" layoutX="202.0" layoutY="122.0" onAction="#onCancel" style="-fx-background-color: #2b5775;" text="Cancel" textFill="#fcf5f5" />
+   </children>
+</AnchorPane>
