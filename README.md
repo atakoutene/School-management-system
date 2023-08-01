@@ -21,6 +21,7 @@ Copy code
 git clone https://github.com/atakoutene/school-management-system.git
 Install Java Development Kit (JDK) if not already installed. Make sure JAVA_HOME environment variable is set.
 
+
 Install MySQL and set up the database using the provided SQL script.
 
 Open the project in your preferred Integrated Development Environment (IDE) that supports Java and JavaFX.
@@ -36,4 +37,4 @@ Acknowledgments
 Special thanks to Contributor Name for their valuable contributions to this project.
 
 Contact
-For inquiries and support, please contact Your atakoutene@gmail.com.
+For inquiries and support, please contact atakoutene@gmail.com.
