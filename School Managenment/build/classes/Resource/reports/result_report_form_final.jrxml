@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="simple_report" pageWidth="595" pageHeight="842" columnWidth="565" leftMargin="20" rightMargin="10" topMargin="10" bottomMargin="10" uuid="2b6b99d9-3bbd-4344-9ebc-1b92719a9276">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="17"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="dataset1" uuid="8b4e6e95-6299-4c47-bfc6-20713ad8c10a">
+		<parameter name="id_course_offered" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_semester" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="course_year" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="course_sem" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select distinct pe.name as studentname,
+	s.id as sid,
+          sc.grade as scor,
+	sc.score as lettergrade,
+	s.studentId as refNum
+from person pe, student s, course_offered co, student_course sc
+where sc.id_student = s.id and
+	pe.id = s.id_person and
+	sc.id_course_offered = $P{id_course_offered} and
+	sc.id_semester = $P{id_semester} and
+	co.course_year =  $P{course_year} and
+	co.course_sem =  $P{course_sem};]]>
+		</queryString>
+		<field name="studentname" class="java.lang.String"/>
+		<field name="sid" class="java.lang.Integer"/>
+		<field name="scor" class="java.lang.Float"/>
+		<field name="lettergrade" class="java.lang.String"/>
+		<field name="refNum" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="dateOfDay" class="java.util.Date"/>
+	<parameter name="id_course_offered" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_semester" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="course_year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="course_sem" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lecturer" class="java.lang.String"/>
+	<parameter name="imagesDir" class="Object" isForPrompting="false">
+		<parameterDescription><![CDATA[The logo image]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="accademicYear" class="java.lang.String"/>
+	<parameter name="code" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select distinct pe.name as studentname,
+	s.id as sid,
+          sc.grade as scor,
+	sc.score as lettergrade,
+	s.studentId as refNum
+from person pe, student s, course_offered co, student_course sc
+where sc.id_student = s.id and
+	pe.id = s.id_person and
+	sc.id_course_offered = $P{id_course_offered} and
+	sc.id_semester = $P{id_semester} and
+	co.course_year =  $P{course_year} and
+	co.course_sem =  $P{course_sem};]]>
+	</queryString>
+	<field name="studentname" class="java.lang.String"/>
+	<field name="sid" class="java.lang.Integer"/>
+	<field name="scor" class="java.lang.Float"/>
+	<field name="lettergrade" class="java.lang.String"/>
+	<field name="refNum" class="java.lang.String"/>
+	<title>
+		<band height="212">
+			<staticText>
+				<reportElement x="140" y="14" width="274" height="21" uuid="838c9b24-c805-4724-9429-2a0fe4427ac7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PKFokam Institute of Excellence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="34" width="178" height="13" uuid="675301b5-b934-466a-af40-370debd2d4c4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true" isItalic="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Dignity - Faith - Responsibility]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="90" width="351" height="26" uuid="4605dda8-70c4-458b-8532-4d3434d6553a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[FINAL RESULTS REPORT FORM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="146" width="126" height="20" uuid="c83e9ac3-6907-4a5b-bdae-69217c4c120e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Course code and Name :]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="3" width="55" height="58" uuid="78fc5e70-7003-4a6e-9a8b-caecb0a6ce42"/>
+				<imageExpression><![CDATA[$P{imagesDir}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="1" y="187" width="119" height="20" uuid="f27a39c4-e485-42ec-9042-5549d0446328"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Name of the lecturer :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="187" width="411" height="20" uuid="cadb337c-c39e-4023-8711-a565cedde663"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lecturer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="146" width="66" height="20" uuid="4ef29ea7-e0bd-4f76-8eb8-f1dad09005e3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="146" width="291" height="20" uuid="3331deae-6044-4e2c-9f6f-fb87e01801e2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="59" width="110" height="20" uuid="afcbbc03-86e1-4425-854a-f4c5d0dcee34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{accademicYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="181" y="59" width="112" height="20" uuid="358c957c-dfe5-4e1d-88ce-5c9a18ee5e94"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ACADEMIC YEAR :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<lastPageFooter>
+		<band height="122">
+			<staticText>
+				<reportElement x="134" y="2" width="340" height="20" uuid="6ac86090-13bd-49b8-ac26-49242d7933b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true" pdfFontName="Times-BoldItalic" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(Columns 4 and 5 are reserved for Administration)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="28" width="179" height="20" uuid="c0e49829-5174-4949-af05-a322c802d2a6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Name and Signature of the Grader]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="28" width="31" height="20" uuid="96df950d-aa58-4a4d-896a-fc6b2cfe4b4f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="431" y="28" width="116" height="20" uuid="bedeee53-2785-444f-8aa3-a9675c9415a7"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateOfDay}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="484">
+			<componentElement>
+				<reportElement key="table 11" x="1" y="0" width="564" height="484" uuid="2f660325-c029-4c0f-a66e-67ab6c9419a9"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="f7d44746-e122-4067-baa7-5f097aae252d">
+						<datasetParameter name="id_course_offered">
+							<datasetParameterExpression><![CDATA[$P{id_course_offered}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_semester">
+							<datasetParameterExpression><![CDATA[$P{id_semester}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="course_year">
+							<datasetParameterExpression><![CDATA[$P{course_year}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="course_sem">
+							<datasetParameterExpression><![CDATA[$P{course_sem}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id">
+							<datasetParameterExpression><![CDATA[$P{id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="258" uuid="a94ebd7d-4ba2-4f5c-b233-9290145148fe">
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="258" height="30" uuid="404d859c-5572-44ba-b318-5225924eeb87"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+								</textElement>
+								<text><![CDATA[Student Name	and Surname]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="258" height="20" uuid="04c17def-ff2c-4f3e-ae5c-01652b6a87f2"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{studentname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b2ad24cd-e677-495b-a824-70e8dd03676c">
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="13c51967-a387-48e4-9a33-4c825643543b"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+								</textElement>
+								<text><![CDATA[Score]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5dbff0fd-4b58-4471-a1b5-d23f4a977200"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{scor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="452a988e-537e-4869-a98b-583a750e6e31">
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="1f4f3935-e299-4d33-9397-a36ed58f7b04"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+								</textElement>
+								<text><![CDATA[Letter Grade]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="32920f30-cd92-48ba-b034-79411d6cd085"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{lettergrade}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="113" uuid="1f72da0b-2ce2-47af-b4e8-820b14a70f30">
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="113" height="30" uuid="5f2e2339-e65f-4920-8ade-47d3b8e7a188"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+								</textElement>
+								<text><![CDATA[Registration Number]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="113" height="20" uuid="b93fd5cf-8f78-481f-882a-7bcea346d1fc"/>
+								<box leftPadding="5">
+									<pen lineWidth="1.0" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{refNum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

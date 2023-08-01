@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddStudCourseController">
+   <children>
+      <TableView fx:id="tAvailaible" layoutX="63.0" layoutY="148.0" prefHeight="323.0" prefWidth="419.0">
+         <columns>
+            <TableColumn fx:id="tcode1" prefWidth="102.0" text="Course Code" />
+            <TableColumn fx:id="tTitle1" prefWidth="316.0" text="Course Title" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tSelected" layoutX="577.0" layoutY="147.0" prefHeight="325.0" prefWidth="391.0">
+         <columns>
+            <TableColumn fx:id="tcode2" prefWidth="105.0" text="Course Code" />
+            <TableColumn fx:id="tTitle2" prefWidth="285.0" text="Course Title" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="saveButton" layoutX="773.0" layoutY="484.0" onAction="#save" style="-fx-background-color: #2b5775;" text="Take Courses" textFill="#d0dae1" />
+      <JFXButton fx:id="cancelButton" layoutX="904.0" layoutY="484.0" onAction="#back" style="-fx-background-color: #2b5775;" text="Cancel" textFill="#d0dae1" />
+      <Label fx:id="formLabel" alignment="CENTER" layoutX="32.0" layoutY="41.0" prefHeight="49.0" prefWidth="944.0" text="[Student Name]'s Course Registration " textFill="#3a3ab8">
+         <font>
+            <Font name="Baskerville Old Face" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="107.0" layoutY="102.0" prefHeight="41.0" prefWidth="307.0" text="Availaible Courses" textFill="#3a3ab8">
+         <font>
+            <Font name="Baskerville Old Face" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="627.0" layoutY="102.0" prefHeight="41.0" prefWidth="307.0" text="Courses Taken" textFill="#3a3ab8">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="496.0" layoutY="235.0" mnemonicParsing="false" onAction="#addCourse">
+         <graphic>
+            <ImageView fx:id="imRightArrow" fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resource/images/right3green.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="496.0" layoutY="325.0" mnemonicParsing="false" onAction="#dropCourse" rotate="180.0">
+         <graphic>
+            <ImageView fx:id="imLeftArrow" fitHeight="50.0" fitWidth="49.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resource/images/leftImg.jpg" />
+               </image>
+               <effect>
+                  <SepiaTone level="0.83" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

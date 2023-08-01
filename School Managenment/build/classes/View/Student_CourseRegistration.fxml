@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minWidth="-Infinity" prefHeight="659.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Student_CourseRegistrationController">
+   <children>
+      <TabPane layoutX="34.0" layoutY="225.0" prefHeight="386.0" prefWidth="817.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Courses">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="967.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="tStudCourse" layoutX="9.0" layoutY="59.0" prefHeight="297.0" prefWidth="799.0">
+                          <columns>
+                            <TableColumn fx:id="tcode" prefWidth="101.0" text="Course Code" />
+                            <TableColumn fx:id="ttitle" prefWidth="365.0" text="Course Title" />
+                              <TableColumn fx:id="tgrade" prefWidth="69.0" text="Grade" />
+                              <TableColumn fx:id="tlettergrade" prefWidth="81.0" text="Letter Grade" />
+                              <TableColumn fx:id="tpass" minWidth="3.0" prefWidth="99.0" text="Passing Grade" />
+                              <TableColumn fx:id="tcredits" prefWidth="83.0" text="Credits" />
+                          </columns>
+                        </TableView>
+                        <JFXComboBox fx:id="semesterbox" layoutX="260.0" layoutY="10.0" prefHeight="31.0" prefWidth="168.0" promptText="Semester" />
+                        <JFXComboBox fx:id="levelbox" layoutX="47.0" layoutY="8.0" prefHeight="31.0" prefWidth="146.0" promptText="Level" />
+                        <JFXButton fx:id="goButton" layoutX="428.0" layoutY="14.0" onAction="#searchStudentCourse" style="-fx-background-color: #2b5775;" text="Go" textFill="#d0dae1" />
+                        <Label alignment="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="31.0" prefWidth="34.0" text="Level" textFill="#3a3ab8" />
+                        <Label alignment="CENTER" layoutX="194.0" layoutY="15.0" prefHeight="31.0" prefWidth="66.0" text="Semester" textFill="#3a3ab8" />
+                        <JFXButton fx:id="courseManagementButton" layoutX="468.0" layoutY="14.0" onAction="#studentCourseRegistration" style="-fx-background-color: #2b5775;" text="Manage Courses Taken" textFill="#d0dae1" />
+                        <JFXButton fx:id="reForm" layoutX="642.0" layoutY="14.0" onAction="#printRegForm" prefHeight="19.0" prefWidth="162.0" style="-fx-background-color: #2b5775;" text="Sem. Registration Form" textFill="#d0dae1" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Grades">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="13.0" layoutY="14.0" prefHeight="31.0" prefWidth="34.0" text="Level" textFill="#3a3ab8" />
+                        <JFXComboBox fx:id="levelGradeBox" layoutX="50.0" layoutY="3.0" prefHeight="31.0" prefWidth="146.0" promptText="Level" />
+                        <Label alignment="CENTER" layoutX="203.0" layoutY="11.0" prefHeight="31.0" prefWidth="66.0" text="Semester" textFill="#3a3ab8" />
+                        <JFXComboBox fx:id="semesterGradeBox" layoutX="267.0" layoutY="4.0" prefHeight="31.0" prefWidth="168.0" promptText="Semester" />
+                        <JFXButton fx:id="goSearchGrades" layoutX="458.0" layoutY="12.0" onAction="#searchStudentCourseGrades" style="-fx-background-color: #2b5775;" text="Search Grades" textFill="#d0dae1" />
+                        <TableView fx:id="SGradeTable" layoutX="9.0" layoutY="45.0" prefHeight="285.0" prefWidth="800.0">
+                          <columns>
+                            <TableColumn fx:id="SGradeTableCClol" prefWidth="433.0" text="Course" />
+                            <TableColumn fx:id="SGradeTableETCol" prefWidth="163.0" text="Eval Type" />
+                              <TableColumn fx:id="SGradeTableGradCol" prefWidth="121.0" text="Test Grade" />
+                              <TableColumn fx:id="SGradeTableLGCol" prefWidth="82.0" text="Letter Grade" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Attendance">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXComboBox fx:id="semAttendBox" layoutX="72.0" layoutY="4.0" onAction="#loadStudentCoursesCombo" prefHeight="31.0" prefWidth="109.0" />
+                        <JFXComboBox fx:id="levelAttendBox" layoutX="226.0" layoutY="2.0" prefHeight="31.0" prefWidth="218.0" />
+                        <Label layoutX="14.0" layoutY="22.0" text="Semester:" textFill="#3a3ab8" />
+                        <Label layoutX="189.0" layoutY="21.0" text="Level:" textFill="#3a3ab8" />
+                        <DatePicker fx:id="startDateField" layoutX="493.0" layoutY="9.0" prefHeight="31.0" prefWidth="109.0" />
+                        <DatePicker fx:id="endDateField" layoutX="633.0" layoutY="9.0" prefHeight="31.0" prefWidth="109.0" />
+                        <Label layoutX="453.0" layoutY="21.0" text="From:" textFill="#3a3ab8" />
+                        <Label layoutX="612.0" layoutY="22.0" text="To:" textFill="#3a3ab8" />
+                        <JFXButton fx:id="searchAttendButton" layoutX="748.0" layoutY="13.0" onAction="#searchStudentAttendance" style="-fx-background-color: #2b5775;" text="Search" textFill="#d0dae1" />
+                        <TableView fx:id="tStudAttendance" layoutX="14.0" layoutY="84.0" prefHeight="253.0" prefWidth="792.0">
+                          <columns>
+                            <TableColumn fx:id="tday" prefWidth="107.0" text="Day" />
+                            <TableColumn fx:id="tdate" prefWidth="87.0" text="Date" />
+                              <TableColumn fx:id="tCourseTitle" prefWidth="352.0" text="Course Title" />
+                              <TableColumn fx:id="tstart" text="Start Time" />
+                              <TableColumn fx:id="tend" prefWidth="75.0" text="End Time" />
+                              <TableColumn fx:id="tpresence" prefWidth="86.0" text="Presence" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="53.0" text="Course (optional) : " textFill="#3a3ab8" />
+                        <JFXComboBox fx:id="studentCourses" layoutX="115.0" layoutY="42.0" prefHeight="25.0" prefWidth="379.0" promptText="Select a course" />
+                        <JFXButton fx:id="printAttendanceBut" layoutX="493.0" layoutY="43.0" onAction="#printAttendanceForm" text=" ">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/images/pdf.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Print attendance form" />
+                           </tooltip>
+                        </JFXButton>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Student progression">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="studentProgressTable" layoutX="4.0" layoutY="58.0" prefHeight="293.0" prefWidth="570.0">
+                          <columns>
+                            <TableColumn fx:id="studentProgressSem" prefWidth="180.0" text="Semester" />
+                            <TableColumn fx:id="studentProgressLevel" prefWidth="387.0" text="Level" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="updateLevel" layoutX="412.0" layoutY="14.0" onAction="#changeStudentLevel" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #2b5775;" text="Manage Student Level" textFill="#d0dae1">
+                           <tooltip>
+                              <Tooltip text="Change student level for a semester" />
+                           </tooltip>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fx:id="imView" fitHeight="109.0" fitWidth="162.0" layoutX="381.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resource/images/default.png" />
+         </image></ImageView>
+      <Label fx:id="studentLabel" alignment="CENTER" layoutX="59.0" layoutY="135.0" prefHeight="58.0" prefWidth="741.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 24;" text=" Student Name" textFill="#3a3ab8">
+         <font>
+            <Font name="Baskerville Old Face" size="31.0" />
+         </font></Label>
+      <Line endX="625.0" endY="70.0" layoutX="226.0" layoutY="144.0" startX="-192.0" startY="70.0" />
+      <JFXButton fx:id="transButton" layoutX="701.0" layoutY="14.0" onAction="#generateTranstript" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #2b5775;" text="Generate Transcript" textFill="#d0dae1" />
+      <Label fx:id="departmentLabel" alignment="CENTER" layoutX="19.0" layoutY="178.0" prefHeight="40.0" prefWidth="285.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 14;" text="Department Name" textFill="#3a3ab8">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="programLabel" alignment="CENTER" layoutX="276.0" layoutY="182.0" prefHeight="31.0" prefWidth="409.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 14;" text="Program Name" textFill="#3a3ab8">
+         <font>
+            <Font name="Baskerville Old Face" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="levelLabel" alignment="CENTER" layoutX="671.0" layoutY="182.0" prefHeight="31.0" prefWidth="181.0" style="-fx-font-size: 14; -fx-font-family: &quot;Times New Roman&quot;;" text="Actual Level" textFill="#3a3ab8">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="transButton1" layoutX="701.0" layoutY="53.0" onAction="#generateTranstriptPKF" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: green;" text="Generate Transcript PKF" textFill="#d0dae1" />
+      <Accordion layoutX="19.0" layoutY="4.0" prefHeight="132.0" prefWidth="234.0">
+        <panes>
+          <TitledPane animated="false" text="Periodical Transcript">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="106.0" prefWidth="244.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="16.0" text="From :" />
+                        <Label layoutX="27.0" layoutY="55.0" text="To: " />
+                        <JFXComboBox fx:id="startSem" layoutX="56.0" prefHeight="31.0" prefWidth="168.0" promptText="Start Semester" />
+                        <JFXComboBox fx:id="endSem" layoutX="55.0" layoutY="40.0" prefHeight="31.0" prefWidth="168.0" promptText="End Semester" />
+                        <JFXButton fx:id="transPeriodic" layoutX="127.0" layoutY="77.0" onAction="#generatePeriodicalTranstript" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: green;" text="Generate" textFill="#d0dae1" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

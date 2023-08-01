@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="selectFileButton"  prefHeight="232.0" prefWidth="452.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CourseOpenedGUIController">
+   <children>
+      <Label fx:id="openCourseTitle" alignment="CENTER" layoutX="113.0" prefHeight="53.0" prefWidth="249.0" text="Open a Course" textFill="#2b5775">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="67.0" prefHeight="20.0" prefWidth="73.0" style="-fx-font-size: 14; -fx-text-fill: #2b5775; -fx-font-weight: bold;" text="Semester : " />
+      <JFXComboBox fx:id="semesterOpened" layoutX="87.0" layoutY="54.0" prefHeight="31.0" prefWidth="164.0" />
+      <Button fx:id="btnSave" layoutX="197.0" layoutY="189.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #2b5775; -fx-text-fill: white;" text="Save" />
+      <Button fx:id="btnCancel" layoutX="316.0" layoutY="189.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #2b5775; -fx-text-fill: white;" text="Cancel" />
+      <Label layoutX="12.0" layoutY="112.0" prefHeight="20.0" prefWidth="128.0" style="-fx-font-size: 14; -fx-text-fill: #2b5775; -fx-font-weight: bold;" text="Lecturer In charge :" />
+      <Label layoutX="13.0" layoutY="150.0" prefHeight="20.0" prefWidth="128.0" style="-fx-font-size: 14; -fx-text-fill: #2b5775; -fx-font-weight: bold;" text="Assistant Lecturer :" />
+      <JFXComboBox fx:id="lecturer" layoutX="149.0" layoutY="103.0" prefHeight="25.0" prefWidth="266.0" />
+      <JFXComboBox fx:id="assistant" layoutX="150.0" layoutY="141.0" prefHeight="25.0" prefWidth="266.0" />
+   </children>
+</AnchorPane>

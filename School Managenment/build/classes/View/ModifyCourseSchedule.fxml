@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.labs.scene.control.BigDecimalField?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ModifyCourseScheduleController">
+   <children>
+      <JFXDatePicker fx:id="datefield" layoutX="174.0" layoutY="149.0" onAction="#getDay" prefHeight="30.0" prefWidth="235.0" />
+      <Label layoutX="105.0" layoutY="199.0" text="Start Time:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="229.0" text="End Time:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="137.0" layoutY="167.0" text="Date:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="daybox" layoutX="172.0" layoutY="115.0" prefHeight="31.0" prefWidth="200.0" promptText="Day of the week" />
+      <Label layoutX="139.0" layoutY="134.0" text="Day:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="searchScheduleButton" layoutX="313.0" layoutY="299.0" onAction="#saveButtonAction" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Save" textFill="#d0dae1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="searchScheduleButton1" layoutX="410.0" layoutY="299.0" onAction="#cancel" prefHeight="22.0" prefWidth="75.0" style="-fx-background-color: #2b5775;" text="Cancel" textFill="#d0dae1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="scheduleLabel" layoutX="61.0" layoutY="12.0" prefHeight="39.0" prefWidth="410.0" style="-fx-alignment: center;" text="Modify Schedule" textFill="#2b5775">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="261.0" text="Place:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="codefield" layoutX="175.0" layoutY="51.0" prefHeight="29.0" prefWidth="200.0" />
+      <JFXTextField fx:id="descriptionfield" layoutX="174.0" layoutY="84.0" prefHeight="29.0" prefWidth="333.0" />
+      <Label layoutX="91.0" layoutY="68.0" text="Course Code:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="99.0" prefHeight="21.0" prefWidth="74.0" text="Course Title:" textFill="#3a3ab8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <BigDecimalField fx:id="startMinutes" layoutX="319.0" layoutY="184.0" prefHeight="31.0" prefWidth="93.0" promptText="Minutes" />
+      <BigDecimalField fx:id="endMinutes" layoutX="319.0" layoutY="215.0" prefHeight="31.0" prefWidth="93.0" promptText="Minutes" />
+      <Label layoutX="172.0" layoutY="198.0" text="Hour" />
+      <Label layoutX="172.0" layoutY="227.0" text="Hour" />
+      <Label layoutX="279.0" layoutY="198.0" text="Minute" />
+      <Label layoutX="279.0" layoutY="227.0" text="Minute" />
+      <JFXComboBox fx:id="startHour" layoutX="206.0" layoutY="188.0" />
+      <JFXComboBox fx:id="endHour" layoutX="205.0" layoutY="216.0" />
+      <JFXComboBox fx:id="ampm1" layoutX="414.0" layoutY="186.0" />
+      <JFXComboBox fx:id="ampm2" layoutX="414.0" layoutY="217.0" />
+      <JFXComboBox fx:id="placefield" layoutX="175.0" layoutY="249.0" promptText="Room" />
+   </children>
+</AnchorPane>

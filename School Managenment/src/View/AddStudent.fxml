@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="745.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddStudentController">
+   <children>
+      <Label layoutX="183.0" layoutY="14.0" text="Register A New Student" textFill="#2b5775">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="name" alignment="CENTER" layoutX="90.0" layoutY="95.0" prefHeight="28.0" prefWidth="265.0" promptText="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="status" layoutX="90.0" layoutY="135.0" prefHeight="25.0" prefWidth="265.0" promptText="                          Level" />
+      <JFXComboBox fx:id="departmentCombo" layoutX="90.0" layoutY="171.0" prefHeight="25.0" prefWidth="265.0" promptText="                Department" />
+      <JFXComboBox fx:id="studProgram" layoutX="90.0" layoutY="208.0" prefHeight="25.0" prefWidth="265.0" promptText="                   Program" />
+      <JFXTextField fx:id="phone" alignment="CENTER" layoutX="90.0" layoutY="241.0" prefHeight="28.0" prefWidth="265.0" promptText="Phone">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="email" alignment="CENTER" layoutX="90.0" layoutY="274.0" prefHeight="28.0" prefWidth="265.0" promptText="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="birthplace" alignment="CENTER" layoutX="90.0" layoutY="307.0" prefHeight="28.0" prefWidth="265.0" promptText="Place of birth">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="408.0" layoutY="102.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Gender">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="male" layoutX="475.0" layoutY="105.0" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="female" layoutX="578.0" layoutY="105.0" text="Female" toggleGroup="$gender" />
+      <JFXTextField fx:id="address" alignment="CENTER" layoutX="410.0" layoutY="124.0" prefHeight="28.0" prefWidth="250.0" promptText="Address">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="birthday" defaultColor="#2b5775" layoutX="412.0" layoutY="161.0" prefHeight="28.0" prefWidth="257.0" promptText="                       Birth Day " />
+      <JFXTextField fx:id="refNumber" alignment="CENTER" layoutX="409.0" layoutY="203.0" prefHeight="25.0" prefWidth="257.0" promptText="Student Reference Number" />
+      <JFXTextField fx:id="parent_info" alignment="CENTER" layoutX="411.0" layoutY="242.0" prefHeight="25.0" prefWidth="257.0" promptText="Parent contact info" />
+      <Label layoutX="409.0" layoutY="293.0" prefHeight="20.0" prefWidth="106.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Entrance year : " />
+      <JFXComboBox fx:id="semCombo" layoutX="508.0" layoutY="283.0" prefHeight="25.0" prefWidth="106.0" promptText="    Semester" />
+      <JFXTextField fx:id="entranceYearTxt" alignment="CENTER" layoutX="617.0" layoutY="283.0" prefHeight="25.0" prefWidth="47.0" promptText="Year" />
+      <Label layoutX="408.0" layoutY="330.0" prefHeight="20.0" prefWidth="90.0" style="-fx-font-size: 14; -fx-text-fill: #3a3ab8;" text="Photo profile: " />
+      <JFXTextField fx:id="photoSelected" layoutX="501.0" layoutY="319.0" prefHeight="25.0" prefWidth="90.0" promptText="       Photo" />
+      <Button fx:id="btnSelectFile" layoutX="592.0" layoutY="321.0" mnemonicParsing="false" onAction="#openFileChooserForSelect" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: green; -fx-text-fill: white;" text="Select a file" />
+      <JFXButton fx:id="btSave" layoutX="409.0" layoutY="387.0" onAction="#toSave" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #2b5775;" text="Register" textFill="#d0dae1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btCancel" layoutX="551.0" layoutY="387.0" onAction="#back" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #2b5775;" text="Cancel" textFill="#d0dae1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

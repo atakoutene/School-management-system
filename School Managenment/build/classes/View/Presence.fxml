@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="128.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="View.PresenceController">
+   <children>
+      <Label layoutX="70.0" layoutY="59.0" text="Remarks" />
+      <JFXTextField layoutX="14.0" layoutY="88.0" />
+      <JFXCheckBox layoutX="78.0" layoutY="31.0" prefWidth="38.0" text=" " />
+   </children>
+</AnchorPane>
